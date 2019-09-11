@@ -1,0 +1,127 @@
+page-login {
+
+  .scroll-content {
+    overflow-y: hidden;
+  }
+
+  .art-container {
+    position: absolute;
+    min-width: 100%;
+
+    img {
+      position: absolute;
+
+      &.art1 {
+        min-width: 124%;
+        left: -70px;
+        top: -138px;
+      }
+
+      &.art2 {
+        top: -179px;
+        left: 0;
+        min-width: 100%;
+      }
+    }
+  }
+
+  .page-title {
+    position: relative;
+    padding: 14px 20px;
+    margin-bottom: 80px;
+
+    h1,
+    h2 {
+      color: #fff;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+
+  .form-container {
+    padding: 15px 25px;
+    position: static;
+
+    .item-input {
+      border: solid 1px #e9e5e5;
+      border-radius: 25px;
+      box-shadow: 0 3px 6px rgba(#4c11f2, 0.06), 0 3px 6px rgba(#4c11f2, 0.06) inset;
+      margin-bottom: 20px;
+      .item-inner {
+        border: 0;
+      }
+    }
+
+    .item-button {
+      background-color: transparent;
+
+      .label {
+        margin: 0 !important;
+      }
+
+      .button {
+        .button-inner {
+          color: color($colors, "text-grey");
+          font-size: 20px;
+          text-transform: lowercase;
+        }
+      }
+    }
+
+    .text-separator {
+      color: color($colors, "text-grey");
+      font-size: 20px;
+      text-transform: lowercase;
+      text-align: center;
+      margin: 0;
+    }
+
+    .facebook-button-item {
+      background-color: transparent;
+
+      .button {
+        background-color: color($colors, "facebook");
+        height: 40px;
+
+        .button-inner {
+          font-size: 18px;
+          text-transform: lowercase;
+          font-weight: normal;
+
+          .icon {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-button {
+    position: absolute !important;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 145px;
+    width: 145px;
+    border-radius: 50%;
+    background-color: #7A9CDF;
+    border: solid 5px #84A8EF;
+
+    .button-inner {
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      position: relative;
+      top: -20px;
+      text-transform: lowercase;
+    }
+  }
+}
