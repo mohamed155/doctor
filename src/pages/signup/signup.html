@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="art-container">
+    <img class="art1" src="assets/imgs/Rectangle 1.png" alt="art">
+    <img class="art2" src="../../assets/imgs/Path 1.png" alt="art">
+  </div>
+  <div class="page-title">
+    <h1>New</h1>
+    <h2>Account</h2>
+    <button ion-fab class="back-btn" (click)="onGoBack()"><ion-icon name="ios-undo"></ion-icon></button>
+  </div>
+  <div class="form-container">
+    <form>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>First name</ion-label>
+            <ion-input name="firstname"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>Last name</ion-label>
+            <ion-input name="lastname"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input name="firstname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input name="password" type="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Confirm password</ion-label>
+        <ion-input name="password" type="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Phone number</ion-label>
+        <ion-input name="phone" type="number"></ion-input>
+      </ion-item>
+      <ion-item no-lines class="facebook-button-item">
+        <button ion-button round block>
+          <ion-icon name="logo-facebook"></ion-icon>
+          continue with facebook
+        </button>
+      </ion-item>
+      <button ion-button type="submit" class="submit-button">Register</button>
+    </form>
+  </div>
+</ion-content>
