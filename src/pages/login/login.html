@@ -1,14 +1,14 @@
 <ion-content>
   <div class="art-container">
     <img class="art1" src="assets/imgs/Rectangle 1.png" alt="art">
-    <img class="art2" src="../../assets/imgs/Path 1.png" alt="art">
+    <img class="art2" src="assets/imgs/Path 1.png" alt="art">
   </div>
   <div class="page-title">
     <h1>Login</h1>
     <h2>Account</h2>
   </div>
   <div class="form-container">
-    <form>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
       <ion-item>
         <ion-label stacked>Username</ion-label>
         <ion-input name="firstname"></ion-input>
