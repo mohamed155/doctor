@@ -4,7 +4,7 @@
     <img class="art2" src="assets/imgs/home-art.png" alt="art">
   </div>
   <div class="title-bar">
-    <button ion-fab class="back-btn">
+    <button ion-fab class="back-btn" (click)="onGoBack()">
       <ion-icon name="ios-undo"></ion-icon>
     </button>
     <button ion-fab class="back-btn">
@@ -56,14 +56,20 @@
   <div class="nav-bar">
     <img src="assets/imgs/Untitled-100.png" alt="bar-top-image">
     <div class="bar-inner">
-      <button ion-button class="nav-btn">
-        <ion-icon name="home"></ion-icon>
+      <button ion-button class="nav-btn left-btn">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
+        <div class="btn-img"></div>
       </button>
-      <button ion-button class="nav-btn">
-        <ion-icon name="home"></ion-icon>
+      <button ion-button class="nav-btn center-btn">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
+        <div class="btn-img"></div>
       </button>
-      <button ion-button class="nav-btn">
-        <ion-icon name="home"></ion-icon>
+      <button ion-button class="nav-btn right-btn">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/round-account-button-with-user-inside.png" alt="account-icon">-->
+        <div class="btn-img"></div>
       </button>
     </div>
   </div>

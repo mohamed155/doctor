@@ -1,4 +1,9 @@
 page-home {
+
+  .scroll-content {
+    overflow-y: hidden;
+  }
+
   .art-container {
     position: absolute;
     min-width: 100%;
@@ -10,12 +15,14 @@ page-home {
         min-width: 124%;
         left: -45px;
         top: -122px;
+        height: 348px;
       }
 
       &.art2 {
         top: -175px;
         left: -15px;
         min-width: 108%;
+        height: 442px;
       }
     }
   }
@@ -93,15 +100,76 @@ page-home {
 
   .nav-bar {
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     left: 0;
+    width: 100%;
+    padding-top: 100px;
+    background: -webkit-radial-gradient(50% -79%, circle, transparent 64%, #fff 10%);
+    overflow: hidden;
+    z-index: -1;
 
     > img {
       position: absolute;
-      min-width: 1274px;
-      left: -509px;
-      top: -828px;
+      min-width: 362%;
+      left: -145%;
+      top: -745px;
       z-index: -1;
+      height: 1242px;
+    }
+
+    .bar-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+
+      .button {
+        width: 77px;
+        height: 77px;
+        background-color: #7A9CDD;
+        border-style: solid;
+        border-color: #84A8EF;
+        border-radius: 50%;
+        border-top-width: 7px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 0;
+
+        &.left-btn, &.right-btn {
+          margin-bottom: 10px;
+        }
+
+        &.center-btn {
+          margin-top: 30px;
+
+          .btn-img {
+            -webkit-mask-box-image: url('../assets/imgs/home-icon-silhouette.png');
+          }
+        }
+
+        &.left-btn {
+          .btn-img {
+            -webkit-mask-box-image: url('../assets/imgs/ticket.png');
+          }
+        }
+
+        &.right-btn {
+          .btn-img {
+            -webkit-mask-box-image: url('../assets/imgs/round-account-button-with-user-inside.png');
+          }
+        }
+
+        .btn-img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #ffffff;
+          width: 40px;
+          height: 40px;
+        }
+
+      }
     }
   }
 }

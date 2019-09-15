@@ -11,4 +11,8 @@ export class HomePage {
 
   }
 
+  onGoBack() {
+    this.navCtrl.pop();
+  }
+
 }
