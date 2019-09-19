@@ -1,5 +1,4 @@
-page-home {
-
+page-account {
   .scroll-content {
     margin-bottom: 86px;
   }
@@ -18,12 +17,12 @@ page-home {
       &.art1 {
         min-width: 124%;
         left: -45px;
-        top: -170px;
+        top: -235px;
         height: 348px;
       }
 
       &.art2 {
-        top: -225px;
+        top: -235px;
         left: -15px;
         min-width: 108%;
         height: 442px;
@@ -84,25 +83,6 @@ page-home {
     }
   }
 
-  .home-grid {
-    .button {
-      width: 109px;
-      height: 109px;
-      border-radius: 20px;
-      padding-top: 1.1em;
-      padding-bottom: 1.1em;
-
-      .button-inner {
-        display: flex;
-        flex-direction: column;
-
-        p {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
   .nav-bar {
     position: absolute;
     bottom: -15px;
@@ -147,7 +127,7 @@ page-home {
           margin-top: 22px;
 
           .btn-img {
-            -webkit-mask-box-image: url('../assets/imgs/home-icon-silhouette.png');
+            -webkit-mask-box-image: url('../assets/imgs/round-account-button-with-user-inside.png');
             background-color: #FFC60A !important;
           }
         }
@@ -160,7 +140,7 @@ page-home {
 
         &.right-btn {
           .btn-img {
-            -webkit-mask-box-image: url('../assets/imgs/round-account-button-with-user-inside.png');
+            -webkit-mask-box-image: url('../assets/imgs/home-icon-silhouette.png');
           }
         }
 

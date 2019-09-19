@@ -8,52 +8,20 @@
     </button>
   </div>
 </ion-header>
+
 <ion-content>
   <div class="art-container">
     <img class="art1" src="assets/imgs/home-art2.png" alt="art">
     <img class="art2" src="assets/imgs/home-art.png" alt="art">
   </div>
   <div class="page-title">
-    <h1>Home</h1>
-    <ion-item no-lines>
+    <h1 text-center>Account</h1>
+    <ion-item no-lines text-center>
       <ion-avatar item-start>
         <img src="assets/imgs/download.png" alt="user-image">
       </ion-avatar>
-      <h3>Welcome</h3>
       <h2>Lena</h2>
     </ion-item>
-  </div>
-  <div class="home-grid">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-6 text-center>
-          <button ion-button>
-            <img src="assets/imgs/hospital.png" alt="button-image">
-            <p>Clinic</p>
-          </button>
-        </ion-col>
-        <ion-col col-6 text-center>
-          <button ion-button>
-            <img src="assets/imgs/doctor.png" alt="button-image">
-            <p>Doctor</p>
-          </button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-6 text-center>
-          <button ion-button>
-            <img src="assets/imgs/band-aid.png" alt="button-image">
-            <p>Pharmacy</p>
-          </button>
-        </ion-col>
-        <ion-col col-6 text-center>
-          <button ion-button>
-            <img src="assets/imgs/x-ray.png" alt="button-image">
-            <p>Test</p>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
   </div>
 </ion-content>
 
@@ -70,7 +38,7 @@
         <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
         <div class="btn-img"></div>
       </button>
-      <button ion-button class="nav-btn right-btn" (click)="onGoToAccount()">
+      <button ion-button class="nav-btn right-btn" (click)="onGoToHomePage()">
         <!--<ion-icon name="home"></ion-icon>-->
         <!--<img src="assets/imgs/round-account-button-with-user-inside.png" alt="account-icon">-->
         <div class="btn-img"></div>

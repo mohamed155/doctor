@@ -9,7 +9,7 @@
     <button ion-fab class="back-btn" (click)="onGoBack()"><ion-icon name="ios-undo"></ion-icon></button>
   </div>
   <div class="form-container">
-    <form>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
       <ion-row>
         <ion-col col-6>
           <ion-item>
@@ -41,7 +41,7 @@
         <ion-input name="phone" type="number"></ion-input>
       </ion-item>
       <ion-item no-lines class="facebook-button-item">
-        <button ion-button round block>
+        <button ion-button type="button" round block>
           <ion-icon name="logo-facebook"></ion-icon>
           continue with facebook
         </button>

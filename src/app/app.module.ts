@@ -8,7 +8,7 @@ import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {SignupPage} from "../pages/signup/signup";
-import TabsComponent from '../components/tabs/tabs';
+import {AccountPage} from "../pages/account/account";
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import TabsComponent from '../components/tabs/tabs';
     HomePage,
     LoginPage,
     SignupPage,
-    TabsComponent
+    AccountPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +28,7 @@ import TabsComponent from '../components/tabs/tabs';
     HomePage,
     LoginPage,
     SignupPage,
-    TabsComponent
+    AccountPage
   ],
   providers: [
     StatusBar,

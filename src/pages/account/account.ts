@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import {HomePage} from "../home/home";
 
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html'
+  selector: 'page-account',
+  templateUrl: 'account.html'
 })
-export class SignupPage {
+export class AccountPage {
 
   constructor(public navCtrl: NavController) {
 
@@ -16,8 +16,8 @@ export class SignupPage {
     this.navCtrl.pop();
   }
 
-  onSubmit() {
-    this.navCtrl.push(HomePage);
+  onGoToHomePage() {
+    this.navCtrl.popTo(HomePage);
   }
 
 }
