@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {AccountPage} from "../account/account";
+import { TicketPage } from '../ticket/ticket';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -13,11 +15,15 @@ export class HomePage {
   }
 
   onGoBack() {
-    this.navCtrl.pop();
+    this.navCtrl.setRoot(LoginPage);
   }
 
   onGoToAccount() {
     this.navCtrl.push(AccountPage);
+  }
+
+  onGoToTickets() {
+    this.navCtrl.push(TicketPage);
   }
 
 }

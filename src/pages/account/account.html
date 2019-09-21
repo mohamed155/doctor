@@ -15,20 +15,85 @@
     <img class="art2" src="assets/imgs/home-art.png" alt="art">
   </div>
   <div class="page-title">
-    <h1 text-center>Account</h1>
-    <ion-item no-lines text-center>
-      <ion-avatar item-start>
+    <h1 text-center margin-bottom>Account</h1>
+    <div class="account-title">
+      <ion-thumbnail>
         <img src="assets/imgs/download.png" alt="user-image">
-      </ion-avatar>
+      </ion-thumbnail>
       <h2>Lena</h2>
-    </ion-item>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <ion-grid padding>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          NAME
+        </ion-col>
+        <ion-col col-8>
+          LENA
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          AGE
+        </ion-col>
+        <ion-col col-8>
+          20
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          GENDER
+        </ion-col>
+        <ion-col col-8>
+          FEMALE
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          DATE OF BIRTH
+        </ion-col>
+        <ion-col col-8>
+          25/4/1990
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          INFO
+        </ion-col>
+        <ion-col col-8>
+          about
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          History
+        </ion-col>
+        <ion-col col-8>
+          <div>DOCTOR MOHAMED</div>
+          <div>DOCTOR MOHAMED</div>
+          <div>DOCTOR MOHAMED</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 color="primary">
+          History
+        </ion-col>
+        <ion-col col-8>
+          <div>DOCTOR MOHAMED</div>
+          <div>DOCTOR MOHAMED</div>
+          <div>DOCTOR MOHAMED</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
 
 <ion-footer>
   <div class="nav-bar">
     <div class="bar-inner">
-      <button ion-button class="nav-btn left-btn">
+      <button ion-button class="nav-btn left-btn" (click)="onGoToTickets()">
         <!--<ion-icon name="home"></ion-icon>-->
         <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
         <div class="btn-img"></div>

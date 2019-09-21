@@ -18,7 +18,7 @@ export class LoginPage {
   }
 
   onSubmit() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

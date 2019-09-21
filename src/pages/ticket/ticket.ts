@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {HomePage} from "../home/home";
-import { TicketPage } from '../ticket/ticket';
+import { AccountPage } from '../account/account';
 
 @Component({
-  selector: 'page-account',
-  templateUrl: 'account.html'
+  selector: 'page-ticket',
+  templateUrl: 'ticket.html'
 })
-export class AccountPage {
+export class TicketPage {
 
   constructor(public navCtrl: NavController) {
 
@@ -21,8 +21,8 @@ export class AccountPage {
     this.navCtrl.popToRoot();
   }
 
-  onGoToTickets() {
-    this.navCtrl.push(TicketPage);
+  onGoToAccount() {
+    this.navCtrl.push(AccountPage);
   }
 
 }
