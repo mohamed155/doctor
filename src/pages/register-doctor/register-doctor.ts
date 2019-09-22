@@ -1,22 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {LoginPage} from "../login/login";
 import {AccountPage} from "../account/account";
-import { TicketPage } from '../ticket/ticket';
-import { LoginPage } from '../login/login';
-import {RegisterDoctorPage} from "../register-doctor/register-doctor";
+import {TicketPage} from "../ticket/ticket";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-register-doctor',
+  templateUrl: 'register-doctor.html'
 })
-export class HomePage {
+export class RegisterDoctorPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
   onGoBack() {
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.pop();
+  }
+
+  onGoToHome() {
+    this.navCtrl.popToRoot();
   }
 
   onGoToAccount() {
@@ -25,10 +28,6 @@ export class HomePage {
 
   onGoToTickets() {
     this.navCtrl.push(TicketPage);
-  }
-
-  onGoToRegisterDoctor() {
-    this.navCtrl.push(RegisterDoctorPage);
   }
 
 }

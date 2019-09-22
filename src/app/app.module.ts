@@ -10,6 +10,7 @@ import {LoginPage} from '../pages/login/login';
 import {SignupPage} from "../pages/signup/signup";
 import {AccountPage} from "../pages/account/account";
 import { TicketPage } from '../pages/ticket/ticket';
+import {RegisterDoctorPage} from "../pages/register-doctor/register-doctor";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TicketPage } from '../pages/ticket/ticket';
     LoginPage,
     SignupPage,
     AccountPage,
-    TicketPage
+    TicketPage,
+    RegisterDoctorPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { TicketPage } from '../pages/ticket/ticket';
     LoginPage,
     SignupPage,
     AccountPage,
-    TicketPage
+    TicketPage,
+    RegisterDoctorPage
   ],
   providers: [
     StatusBar,

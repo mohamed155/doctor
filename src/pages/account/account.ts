@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {HomePage} from "../home/home";
 import { TicketPage } from '../ticket/ticket';
+import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 
 @Component({
   selector: 'page-account',
@@ -23,6 +24,10 @@ export class AccountPage {
 
   onGoToTickets() {
     this.navCtrl.push(TicketPage);
+  }
+
+  onGoToRegisterDoctor() {
+    this.navCtrl.push(RegisterDoctorPage);
   }
 
 }
