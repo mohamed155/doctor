@@ -4,6 +4,7 @@ import {AccountPage} from "../account/account";
 import { TicketPage } from '../ticket/ticket';
 import { LoginPage } from '../login/login';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
+import {ClinicCategoryPage} from "../clinic-category/clinic-category";
 
 @Component({
   selector: 'page-home',
@@ -29,6 +30,10 @@ export class HomePage {
 
   onGoToRegisterDoctor() {
     this.navCtrl.push(RegisterDoctorPage);
+  }
+
+  onGoToClinicCategory() {
+    this.navCtrl.push(ClinicCategoryPage);
   }
 
 }
