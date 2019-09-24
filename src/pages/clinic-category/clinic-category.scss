@@ -1,10 +1,10 @@
 page-clinic-category {
-
   .scroll-content {
     margin-bottom: 86px;
   }
 
-  .header::after, .header::before {
+  .header::after,
+  .header::before {
     content: unset;
   }
 
@@ -52,7 +52,7 @@ page-clinic-category {
     position: relative;
     padding: 14px 20px;
     padding-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     .item {
       padding: 0;
@@ -86,15 +86,50 @@ page-clinic-category {
 
   .page-content {
     .logo-container {
-      background-color: color($colors, 'primary');
+      background-color: color($colors, "primary");
       margin: auto;
+      margin-bottom: 30px;
       width: 109px;
       height: 109px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 30px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-input {
+      border: solid 1px #1038ff;
+      border-radius: 50px;
+      margin-bottom: 20px;
+
+      .label {
+        margin: 0;
+      }
+
+      .icon {
+        font-size: 25px;
+        color: #1038ff;
+      }
+    }
+
+    .clinic-category-list {
+      .clinic-category {
+        padding: 30px 20px;
+        background-color: #1038ff;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 46px;
+          height: auto;
+        }
+        
+        .button-inner {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+      }
     }
   }
 
@@ -125,16 +160,17 @@ page-clinic-category {
       .button {
         width: 77px;
         height: 77px;
-        background-color: #7A9CDD;
+        background-color: #7a9cdd;
         border-style: solid;
-        border-color: #84A8EF;
+        border-color: #84a8ef;
         border-radius: 50%;
         border-top-width: 7px;
         border-left-width: 5px;
         border-right-width: 5px;
         border-bottom-width: 0;
 
-        &.left-btn, &.right-btn {
+        &.left-btn,
+        &.right-btn {
           top: -12px;
         }
 
@@ -142,20 +178,20 @@ page-clinic-category {
           margin-top: 22px;
 
           .btn-img {
-            -webkit-mask-box-image: url('../assets/imgs/home-icon-silhouette.png');
-            background-color: #FFC60A !important;
+            -webkit-mask-box-image: url("../assets/imgs/home-icon-silhouette.png");
+            background-color: #ffc60a !important;
           }
         }
 
         &.left-btn {
           .btn-img {
-            -webkit-mask-box-image: url('../assets/imgs/ticket.png');
+            -webkit-mask-box-image: url("../assets/imgs/ticket.png");
           }
         }
 
         &.right-btn {
           .btn-img {
-            -webkit-mask-box-image: url('../assets/imgs/round-account-button-with-user-inside.png');
+            -webkit-mask-box-image: url("../assets/imgs/round-account-button-with-user-inside.png");
           }
         }
 
@@ -168,7 +204,6 @@ page-clinic-category {
           width: 40px;
           height: 40px;
         }
-
       }
     }
   }
