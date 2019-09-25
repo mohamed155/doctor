@@ -4,23 +4,28 @@ import {AccountPage} from "../account/account";
 import { TicketPage } from '../ticket/ticket';
 import { LoginPage } from '../login/login';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
-import {ClinicCategoryPage} from "../clinic-category/clinic-category";
-import {DoctorPage} from "../doctor/doctor";
-import {PharmacyPage} from "../pharmacy/pharmacy";
-import { TestPage } from '../test/test';
+import {FilterPage} from "../filter/filter";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-test',
+  templateUrl: 'test.html'
 })
-export class HomePage {
+export class TestPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
+  onGoToFilter() {
+    this.navCtrl.push(FilterPage);
+  }
+
   onGoBack() {
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.pop();
+  }
+
+  onGoToHome() {
+    this.navCtrl.popToRoot();
   }
 
   onGoToAccount() {
@@ -35,19 +40,4 @@ export class HomePage {
     this.navCtrl.push(RegisterDoctorPage);
   }
 
-  onGoToClinicCategory() {
-    this.navCtrl.push(ClinicCategoryPage);
-  }
-
-  onGoToDoctor() {
-    this.navCtrl.push(DoctorPage);
-  }
-
-  onGoToPharmacy() {
-    this.navCtrl.push(PharmacyPage);
-  }
-
-  onGoToTest() {
-    this.navCtrl.push(TestPage);
-  }
 }

@@ -15,6 +15,7 @@ import {ClinicCategoryPage} from "../pages/clinic-category/clinic-category";
 import {FilterPage} from "../pages/filter/filter";
 import {DoctorPage} from "../pages/doctor/doctor";
 import {PharmacyPage} from "../pages/pharmacy/pharmacy";
+import { TestPage } from '../pages/test/test';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {PharmacyPage} from "../pages/pharmacy/pharmacy";
     ClinicCategoryPage,
     FilterPage,
     DoctorPage,
-    PharmacyPage
+    PharmacyPage,
+    TestPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import {PharmacyPage} from "../pages/pharmacy/pharmacy";
     ClinicCategoryPage,
     FilterPage,
     DoctorPage,
-    PharmacyPage
+    PharmacyPage,
+    TestPage
   ],
   providers: [
     StatusBar,
