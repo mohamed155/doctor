@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
 import {AccountPage} from "../account/account";
-import { TicketPage } from '../ticket/ticket';
-import { LoginPage } from '../login/login';
+import {TicketPage} from '../ticket/ticket';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 import {FilterPage} from "../filter/filter";
 
 @Component({
-  selector: 'page-clinic-category',
-  templateUrl: 'clinic-category.html'
+  selector: 'page-doctor',
+  templateUrl: 'doctor.html'
 })
-export class ClinicCategoryPage {
+export class DoctorPage {
 
   constructor(public navCtrl: NavController) {
 
