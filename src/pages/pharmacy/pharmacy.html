@@ -1,0 +1,53 @@
+<ion-header>
+  <div class="title-bar">
+    <button ion-fab class="back-btn" (click)="onGoBack()">
+      <ion-icon name="ios-undo"></ion-icon>
+    </button>
+    <button ion-fab class="back-btn" (click)="onGoToRegisterDoctor()">
+      <ion-icon name="ios-menu-outline"></ion-icon>
+    </button>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="art-container">
+    <img class="art1" src="assets/imgs/clinic-art2.png" alt="art">
+    <img class="art2" src="assets/imgs/clinic-art.png" alt="art">
+  </div>
+  <div class="page-title">
+    <h1 text-center>pharmacy</h1>
+  </div>
+  <div class="page-content" text-center padding>
+    <img class="background-image" src="assets/imgs/Group%20142.png" alt="background">
+    <div class="logo-container">
+      <img src="assets/imgs/band-aid.png" alt="clinic logo">
+    </div>
+    <h3 class="page-text">ارفع الروشيتة</h3>
+    <div class="bottom-row" text-center>
+      <button class="upload-btn" ion-button clear>
+        <img src="assets/imgs/upload%20btn.png" alt="upload">
+      </button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="nav-bar">
+    <div class="bar-inner">
+      <button ion-button class="nav-btn left-btn" (click)="onGoToTickets()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn center-btn" (click)="onGoToHome()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn right-btn" (click)="onGoToAccount()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/round-account-button-with-user-inside.png" alt="account-icon">-->
+        <div class="btn-img"></div>
+      </button>
+    </div>
+  </div>
+</ion-footer>

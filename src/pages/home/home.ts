@@ -6,6 +6,7 @@ import { LoginPage } from '../login/login';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 import {ClinicCategoryPage} from "../clinic-category/clinic-category";
 import {DoctorPage} from "../doctor/doctor";
+import {PharmacyPage} from "../pharmacy/pharmacy";
 
 @Component({
   selector: 'page-home',
@@ -39,5 +40,9 @@ export class HomePage {
 
   onGoToDoctor() {
     this.navCtrl.push(DoctorPage);
+  }
+
+  onGoToPharmacy() {
+    this.navCtrl.push(PharmacyPage);
   }
 }
