@@ -1,0 +1,85 @@
+<ion-header>
+  <div class="title-bar">
+    <button ion-fab class="back-btn" (click)="onGoBack()">
+      <ion-icon name="ios-undo"></ion-icon>
+    </button>
+    <button ion-fab class="back-btn" (click)="onGoToRegisterDoctor()">
+      <ion-icon name="ios-menu-outline"></ion-icon>
+    </button>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="art-container">
+    <img class="art1" src="assets/imgs/filter-art2.png" alt="art">
+    <img class="art2" src="assets/imgs/filter-art.png" alt="art">
+  </div>
+  <div class="page-title" text-center>
+    <ion-icon name="color-filter"></ion-icon>
+  </div>
+  <div class="page-content">
+    <ion-list padding>
+      <ion-item dir="rtl" no-lines>
+        <ion-label>المنطقة</ion-label>
+        <ion-select>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item dir="rtl" no-lines>
+        <ion-label>المنطقة</ion-label>
+        <ion-select>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item dir="rtl" no-lines>
+        <ion-label>المنطقة</ion-label>
+        <ion-select>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item dir="rtl" no-lines>
+        <ion-label>المنطقة</ion-label>
+        <ion-select>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+          <ion-option>منطقة 1</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="nav-bar">
+    <div class="bar-inner">
+      <button ion-button class="nav-btn left-btn" (click)="onGoToTickets()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn center-btn" (click)="onGoToHome()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn right-btn" (click)="onGoToAccount()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/round-account-button-with-user-inside.png" alt="account-icon">-->
+        <div class="btn-img"></div>
+      </button>
+    </div>
+  </div>
+</ion-footer>

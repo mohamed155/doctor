@@ -25,7 +25,7 @@
         <ion-icon name="ios-search"></ion-icon>
       </ion-label>
       <ion-input></ion-input>
-      <button ion-button clear item-end>
+      <button ion-button clear item-end (click)="onGoToFilter()">
         <ion-icon name="color-filter"></ion-icon>
       </button>
     </ion-item>
@@ -66,7 +66,7 @@
         <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
         <div class="btn-img"></div>
       </button>
-      <button ion-button class="nav-btn center-btn">
+      <button ion-button class="nav-btn center-btn" (click)="onGoToHome()">
         <!--<ion-icon name="home"></ion-icon>-->
         <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
         <div class="btn-img"></div>

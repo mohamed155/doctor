@@ -12,6 +12,7 @@ import {AccountPage} from "../pages/account/account";
 import { TicketPage } from '../pages/ticket/ticket';
 import {RegisterDoctorPage} from "../pages/register-doctor/register-doctor";
 import {ClinicCategoryPage} from "../pages/clinic-category/clinic-category";
+import {FilterPage} from "../pages/filter/filter";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ClinicCategoryPage} from "../pages/clinic-category/clinic-category";
     AccountPage,
     TicketPage,
     RegisterDoctorPage,
-    ClinicCategoryPage
+    ClinicCategoryPage,
+    FilterPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import {ClinicCategoryPage} from "../pages/clinic-category/clinic-category";
     AccountPage,
     TicketPage,
     RegisterDoctorPage,
-    ClinicCategoryPage
+    ClinicCategoryPage,
+    FilterPage
   ],
   providers: [
     StatusBar,
