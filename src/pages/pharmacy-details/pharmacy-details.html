@@ -14,19 +14,32 @@
     <img class="art2" src="assets/imgs/clinic-art.png" alt="art">
   </div>
   <div class="page-title">
-    <h1 text-center>pharmacy</h1>
+    <h1 text-center margin-right>pharmacy</h1>
+    <img class="background-image" src="assets/imgs/band-aid.png" alt="background">
   </div>
   <div class="page-content" text-center padding>
-    <img class="background-image" src="assets/imgs/Group%20142.png" alt="background">
-    <div class="logo-container">
-      <img src="assets/imgs/band-aid.png" alt="clinic logo">
-    </div>
-    <h3 class="page-text">ارفع الروشيتة</h3>
-    <div class="bottom-row" text-center>
-      <button class="upload-btn" ion-button clear (click)="onGoToPharmacyPage()">
-        <img src="assets/imgs/upload%20btn.png" alt="upload">
+    <div class="clinic-category-list">
+      <button ion-button block round justify-content-between class="clinic-category">
+        <img src="assets/imgs/Path 70.png" alt="heart">
+        <div class="test-right" text-right>
+          <h3 no-margin>صيدلية العزبي</h3>
+          <h4 no-margin>زهراء مدينة نصر</h4>
+        </div>
       </button>
     </div>
+    <div class="image-container" margin-bottom>
+      <img src="assets/imgs/117.png" alt="pharmacy name">
+    </div>
+    <h1 class="search-title" text-center>بحث عن الدواء</h1>
+    <ion-item no-lines class="search-input">
+      <ion-label>
+        <ion-icon name="ios-search"></ion-icon>
+      </ion-label>
+      <ion-input></ion-input>
+      <button ion-button clear item-end (click)="onGoToFilter()">
+        <ion-icon name="color-filter"></ion-icon>
+      </button>
+    </ion-item>
   </div>
 </ion-content>
 

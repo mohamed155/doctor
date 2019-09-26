@@ -16,6 +16,7 @@ import {FilterPage} from "../pages/filter/filter";
 import {DoctorPage} from "../pages/doctor/doctor";
 import {PharmacyPage} from "../pages/pharmacy/pharmacy";
 import { TestPage } from '../pages/test/test';
+import {PharmacyDetailsPage} from "../pages/pharmacy-details/pharmacy-details";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TestPage } from '../pages/test/test';
     FilterPage,
     DoctorPage,
     PharmacyPage,
-    TestPage
+    TestPage,
+    PharmacyDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { TestPage } from '../pages/test/test';
     FilterPage,
     DoctorPage,
     PharmacyPage,
-    TestPage
+    TestPage,
+    PharmacyDetailsPage
   ],
   providers: [
     StatusBar,
