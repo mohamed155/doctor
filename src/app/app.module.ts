@@ -17,6 +17,7 @@ import {DoctorPage} from "../pages/doctor/doctor";
 import {PharmacyPage} from "../pages/pharmacy/pharmacy";
 import { TestPage } from '../pages/test/test';
 import {PharmacyDetailsPage} from "../pages/pharmacy-details/pharmacy-details";
+import {ClinicListPage} from "../pages/clinic-list/clinic-list";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {PharmacyDetailsPage} from "../pages/pharmacy-details/pharmacy-details";
     DoctorPage,
     PharmacyPage,
     TestPage,
-    PharmacyDetailsPage
+    PharmacyDetailsPage,
+    ClinicListPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import {PharmacyDetailsPage} from "../pages/pharmacy-details/pharmacy-details";
     DoctorPage,
     PharmacyPage,
     TestPage,
-    PharmacyDetailsPage
+    PharmacyDetailsPage,
+    ClinicListPage
   ],
   providers: [
     StatusBar,

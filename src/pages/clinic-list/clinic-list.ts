@@ -1,17 +1,15 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import {AccountPage} from "../account/account";
-import { TicketPage } from '../ticket/ticket';
-import { LoginPage } from '../login/login';
-import {RegisterDoctorPage} from "../register-doctor/register-doctor";
+import {Component} from "@angular/core";
+import {NavController} from "ionic-angular";
 import {FilterPage} from "../filter/filter";
-import {ClinicListPage} from "../clinic-list/clinic-list";
+import {AccountPage} from "../account/account";
+import {TicketPage} from "../ticket/ticket";
+import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 
 @Component({
-  selector: 'page-clinic-category',
-  templateUrl: 'clinic-category.html'
+  selector: 'page-clinic-list',
+  templateUrl: 'clinic-list.html'
 })
-export class ClinicCategoryPage {
+export class ClinicListPage {
 
   constructor(public navCtrl: NavController) {
 
@@ -39,10 +37,6 @@ export class ClinicCategoryPage {
 
   onGoToRegisterDoctor() {
     this.navCtrl.push(RegisterDoctorPage);
-  }
-
-  onGoToClinicList() {
-    this.navCtrl.push(ClinicListPage);
   }
 
 }
