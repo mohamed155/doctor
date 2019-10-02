@@ -105,6 +105,7 @@ page-clinic-list {
   }
 
   .page-content {
+    overflow: visible;
 
     .search-input {
       border: solid 1px #1038ff;
@@ -165,6 +166,148 @@ page-clinic-list {
 
         &:last-child {
           font-weight: bold;
+        }
+      }
+    }
+
+    .clinic-list {
+      .doctor-btn {
+        height: unset;
+        display: block;
+        width: 100%;
+        position: relative;
+        overflow: visible;
+        content: none;
+        padding: 20px;
+        margin-bottom: 30px;
+
+        .reserve-btn {
+          position: absolute;
+          left: 10px;
+          bottom: 2px;
+          background: #FF7575;
+          font-weight: bold;
+          padding: 0 40px;
+        }
+
+        &::before {
+          content: '';
+          width: 104%;
+          height: 100%;
+          background: #7DA3EF;
+          border-radius: 126px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+          z-index: -2;
+        }
+
+        .button-inner {
+          flex-direction: column;
+          overflow: visible;
+          content: none;
+        }
+
+        .doctor-info {
+          background: rgba(#4B00FF, 0.80);
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 500px;
+          position: relative;
+
+          img {
+            object-fit: none;
+          }
+
+          .left {
+            padding: 5px 25px;
+
+            > h2 {
+              color: #ffffff;
+
+              .prefix {
+                color: color($colors, 'primary');
+              }
+            }
+
+            .doctor-type {
+              display: flex;
+
+              p {
+                font-size: 20px;
+                line-height: 150%;
+                color: #ffffff;
+              }
+
+              img {
+                margin-right: 10px;
+                margin-left: 10px;
+              }
+            }
+
+            * {
+              margin: 0;
+              font-weight: bold;
+            }
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            background: rgba(#4B00FF, 0.26);
+            border-radius: 500px;
+            z-index: -1;
+          }
+        }
+
+        .doctor-rate {
+          font-size: 20px;
+          color: #ffffff;
+
+          .icon {
+            color: #ED8A19;
+          }
+        }
+
+        .clinic-info {
+          width: 100%;
+          margin-top:  10px;
+
+          .info-row {
+            display: flex;
+            align-items: center;
+            //margin-top: 10px;
+            //margin-bottom: 10px;
+
+            h3 {
+              margin: 0;
+              color: #ffffff;
+              font-weight: bold;
+
+              .price {
+                color: #FFE600;
+              }
+            }
+
+            .image-container {
+              width: 40px;
+              height: 40px;
+              background: #ffffff;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 10px 20px;
+            }
+          }
         }
       }
     }
