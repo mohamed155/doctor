@@ -1,0 +1,375 @@
+page-clinic-details {
+  .scroll-content {
+    margin-bottom: 86px;
+  }
+
+  .header::after, .header::before {
+    content: unset;
+  }
+
+  .art-container {
+    position: absolute;
+    min-width: 100%;
+
+    img {
+      position: absolute;
+
+      &.art1 {
+        min-width: 124%;
+        left: -45px;
+        top: -185px;
+        height: 220px;
+      }
+
+      &.art2 {
+        top: -120px;
+        left: -15px;
+        min-width: 108%;
+        height: 122px;
+      }
+    }
+  }
+
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+
+    .back-btn {
+      background-color: transparent;
+      box-shadow: none;
+
+      .icon {
+        color: #000;
+        font-size: 35px;
+      }
+    }
+  }
+
+  .page-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      position: relative;
+      z-index: 5;
+      top: -40px;
+    }
+  }
+
+  .page-content {
+    .doctor-btn {
+      height: unset;
+      display: block;
+      width: 100%;
+      position: relative;
+      overflow: visible;
+      content: none;
+      padding: 20px;
+      margin-bottom: 30px;
+
+      &::before {
+        content: '';
+        width: 104%;
+        height: 100%;
+        background: #7DA3EF;
+        border-radius: 126px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+        z-index: -2;
+      }
+
+      .button-inner {
+        flex-direction: column;
+        overflow: visible;
+        content: none;
+      }
+
+      .doctor-info {
+        background: rgba(#4B00FF, 0.80);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 500px;
+        position: relative;
+
+        img {
+          object-fit: none;
+        }
+
+        .left {
+          padding: 5px 25px;
+
+          > h2 {
+            color: #ffffff;
+
+            .prefix {
+              color: color($colors, 'primary');
+            }
+          }
+
+          .doctor-type {
+            display: flex;
+
+            p {
+              font-size: 20px;
+              line-height: 150%;
+              color: #ffffff;
+            }
+
+            img {
+              margin-right: 10px;
+              margin-left: 10px;
+            }
+          }
+
+          * {
+            margin: 0;
+            font-weight: bold;
+          }
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -30px;
+          background: rgba(#4B00FF, 0.26);
+          border-radius: 500px;
+          z-index: -1;
+        }
+      }
+
+      .doctor-rate {
+        font-size: 20px;
+        color: #ffffff;
+
+        .icon {
+          color: #ED8A19;
+        }
+      }
+
+      .clinic-info {
+        width: 100%;
+        margin-top:  10px;
+
+        .info-row {
+          display: flex;
+          align-items: center;
+          //margin-top: 10px;
+          //margin-bottom: 10px;
+
+          h3 {
+            margin: 0;
+            color: #ffffff;
+            font-weight: bold;
+
+            .price {
+              color: #FFE600;
+            }
+          }
+
+          .image-container {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 20px;
+          }
+        }
+      }
+    }
+
+    .reserve-btn {
+      background: #FF7575;
+      font-weight: bold;
+      padding: 0 40px;
+    }
+
+    .slider-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .slider-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          margin: 0;
+          color: #FF7575;
+        }
+
+        img {
+          object-fit: none;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      .date-box {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 37px;
+        padding: 1px 20px;
+        margin: 10px 0;
+
+        h4 {
+          color: #FF7575;
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #A19D9D;
+          font-weight: bold;
+        }
+      }
+
+      .reserve-date {
+        background: #FF7575;
+      }
+    }
+
+    .clinic-info-box {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 37px;
+      position: relative;
+
+      .info-inner {
+        display: inline-block;
+
+        h1 {
+          color: #FF7575;
+        }
+
+        p {
+          color: #acacac;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+      }
+    }
+
+    .conversation {
+      display: flex;
+      font-size: 30px;
+      color: #002BFF;
+      align-items: center;
+
+      h3 {
+        font-size: 25px;
+      }
+
+      .icon {
+        margin-left: 20px;
+      }
+    }
+
+    .doctor-rate {
+      .rate-btn {
+        background: #F1EEEE;
+        color: #4463FC;
+
+        * {
+          margin: 0;
+          font-size: 25px;
+        }
+
+        .icon {
+          margin-left: 15px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .nav-bar {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 37px 10px 37px rgba(0, 0, 0, 0.5);
+
+    //> img {
+    //  position: absolute;
+    //  min-width: 362%;
+    //  left: -145%;
+    //  top: -745px;
+    //  z-index: -1;
+    //  height: 1242px;
+    //}
+
+    .bar-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+      background: #ffffff;
+
+      .button {
+        width: 77px;
+        height: 77px;
+        background-color: #7a9cdd;
+        border-style: solid;
+        border-color: #84a8ef;
+        border-radius: 50%;
+        border-top-width: 7px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 0;
+
+        &.left-btn,
+        &.right-btn {
+          top: -12px;
+        }
+
+        &.center-btn {
+          margin-top: 22px;
+
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/home-icon-silhouette.png");
+            background-color: #ffc60a !important;
+          }
+        }
+
+        &.left-btn {
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/ticket.png");
+          }
+        }
+
+        &.right-btn {
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/round-account-button-with-user-inside.png");
+          }
+        }
+
+        .btn-img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #ffffff;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

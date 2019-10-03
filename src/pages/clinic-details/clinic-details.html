@@ -1,0 +1,149 @@
+
+
+<ion-content>
+
+  <div class="title-bar">
+    <button ion-fab class="back-btn" (click)="onGoBack()">
+      <ion-icon name="ios-undo"></ion-icon>
+    </button>
+    <button ion-fab class="back-btn" (click)="onGoToRegisterDoctor()">
+      <ion-icon name="ios-menu-outline"></ion-icon>
+    </button>
+  </div>
+  <div class="art-container">
+    <img class="art1" src="assets/imgs/doctor-art2.png" alt="art">
+    <img class="art2" src="assets/imgs/doctor-art.png" alt="art">
+  </div>
+
+  <div class="page-title">
+    <img src="assets/imgs/doctor.png" alt="doctor-icon" />
+  </div>
+
+  <div class="page-content">
+    <div dir="rtl" class="doctor-btn">
+      <div class="doctor-info">
+        <div class="left">
+          <h2><span class="prefix">دكتور</span> محمد احمد </h2>
+          <div class="doctor-type">
+            <img src="assets/imgs/Group%2043.png" alt="doctor-type">
+            <p>قلب</p>
+          </div>
+        </div>
+        <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
+      </div>
+      <div class="doctor-rate" text-center>
+        <span class="rate-label">تقييم الزوار</span>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <span class="visitors">زائر 800</span>
+      </div>
+      <div class="clinic-info">
+        <div class="info-row">
+          <div class="image-container">
+            <img src="assets/imgs/maps-and-flags.png" alt="location-icon">
+          </div>
+          <h3>مصر الجديدة : شارع الخليفة المامون</h3>
+        </div>
+        <div class="info-row">
+          <div class="image-container">
+            <img src="assets/imgs/XMLID_100_.png" alt="price-icon">
+          </div>
+          <h3>سعر الكشف <span class="price">100</span> جنيه</h3>
+        </div>
+        <div class="info-row">
+          <div class="image-container">
+            <img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">
+          </div>
+          <h3>مدة الانتظار : 22 دقيقة</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="resevation-row" text-center>
+      <button class="reserve-btn" ion-button round>احجز الان</button>
+    </div>
+
+    <div class="slider-container" dir="rtl">
+      <div class="slider-title" text-center>
+        <img src="assets/imgs/calendar%20(1).png" alt="calendar-icon" />
+        <h2>مواعيد</h2>
+      </div>
+      <ion-slides slidesPerView="2.2" spaceBetween="20" dir="rtl">
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round>احجز الان</button>
+        </ion-slide>
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round>احجز الان</button>
+        </ion-slide>
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round>احجز الان</button>
+        </ion-slide>
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round>احجز الان</button>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="clinic-info-box" dir="rtl" margin text-center>
+      <img src="assets/imgs/2497414.png" alt="lamb-icon" />
+      <div class="info-inner" text-start>
+        <h1>معلومات عن الدكتور</h1>
+        <p>اخصائي جلدية</p>
+      </div>
+    </div>
+
+    <div class="conversation" dir="rtl" margin>
+      <ion-icon name="menu"></ion-icon>
+      <h3>محادثة</h3>
+    </div>
+
+    <div class="doctor-rate" dir="rtl" margin>
+      <button large class="rate-btn" ion-button block round>
+        <ion-icon name="star"></ion-icon>
+        <h2>تقييم الدكتور</h2>
+      </button>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <div class="nav-bar">
+    <div class="bar-inner">
+      <button ion-button class="nav-btn left-btn" (click)="onGoToTickets()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/ticket.png" alt="tickets-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn center-btn" (click)="onGoToHome()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/home-icon-silhouette.png" alt="home-icon">-->
+        <div class="btn-img"></div>
+      </button>
+      <button ion-button class="nav-btn right-btn" (click)="onGoToAccount()">
+        <!--<ion-icon name="home"></ion-icon>-->
+        <!--<img src="assets/imgs/round-account-button-with-user-inside.png" alt="account-icon">-->
+        <div class="btn-img"></div>
+      </button>
+    </div>
+  </div>
+</ion-footer>
