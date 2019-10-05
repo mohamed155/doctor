@@ -1,0 +1,515 @@
+page-clinic-reserve {
+  .scroll-content {
+    margin-bottom: 86px;
+  }
+
+  .header::after,
+  .header::before {
+    content: unset;
+  }
+
+  .art-container {
+    position: absolute;
+    min-width: 100%;
+
+    img {
+      position: absolute;
+
+      &.art1 {
+        min-width: 124%;
+        left: -45px;
+        top: -185px;
+        height: 220px;
+      }
+
+      &.art2 {
+        top: -88px;
+        left: -8px;
+        min-width: 104%;
+        height: 122px;
+      }
+    }
+  }
+
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+
+    .back-btn {
+      background-color: transparent;
+      box-shadow: none;
+
+      .icon {
+        color: #000;
+        font-size: 35px;
+      }
+    }
+  }
+
+  .page-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      position: relative;
+      z-index: 5;
+      top: -40px;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    img {
+      position: relative;
+      z-index: 5;
+      top: -40px;
+    }
+  }
+
+  .page-content {
+    .button-inner {
+      flex-direction: column;
+      overflow: visible;
+      content: none;
+    }
+
+    .doctor-info {
+      background: rgba(#4b00ff, 0.8);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 500px;
+      position: relative;
+
+      > img {
+        object-fit: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -37px;
+      }
+
+      .left {
+        padding: 5px 25px;
+        display: flex;
+        padding-top: 50px;
+        justify-content: space-between;
+        width: 100%;
+
+        > h2 {
+          color: #ffffff;
+          order: 2;
+
+          .prefix {
+            color: color($colors, "primary");
+          }
+        }
+
+        .doctor-type {
+          display: flex;
+          order: 1;
+
+          p {
+            font-size: 20px;
+            line-height: 150%;
+            color: #ffffff;
+          }
+
+          img {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+        }
+
+        * {
+          margin: 0;
+          font-weight: bold;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        background: rgba(#4b00ff, 0.26);
+        border-radius: 500px;
+        z-index: -1;
+      }
+    }
+
+    .doctor-rate {
+      font-size: 20px;
+      color: #ffffff;
+
+      .icon {
+        color: #ed8a19;
+      }
+    }
+
+    .clinic-info {
+      width: 100%;
+      margin-top: 10px;
+
+      .info-row {
+        display: flex;
+        align-items: center;
+        //margin-top: 10px;
+        //margin-bottom: 10px;
+
+        h3 {
+          margin: 0;
+          color: #ffffff;
+          font-weight: bold;
+
+          .price {
+            color: #ffe600;
+          }
+        }
+
+        .image-container {
+          width: 40px;
+          height: 40px;
+          background: #ffffff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px 20px;
+        }
+      }
+    }
+
+    .reserve-btn {
+      background: #ff7575;
+      font-weight: bold;
+      padding: 0 40px;
+    }
+
+    .slider-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .slider-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          margin: 0;
+          color: #ff7575;
+        }
+
+        img {
+          object-fit: none;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      .date-box {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 37px;
+        padding: 1px 20px;
+        margin: 10px 0;
+
+        h4 {
+          color: #ff7575;
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #a19d9d;
+          font-weight: bold;
+        }
+      }
+
+      .reserve-date {
+        background: #ff7575;
+      }
+    }
+
+    .clinic-info-box {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 37px;
+      position: relative;
+
+      .info-inner {
+        display: inline-block;
+
+        h1 {
+          color: #ff7575;
+        }
+
+        p {
+          color: #acacac;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+      }
+    }
+
+    .conversation {
+      display: flex;
+      font-size: 30px;
+      color: #002bff;
+      align-items: center;
+
+      h3 {
+        font-size: 25px;
+      }
+
+      .icon {
+        margin-left: 20px;
+      }
+    }
+
+    .doctor-rate {
+      .rate-btn {
+        background: #f1eeee;
+        color: #4463fc;
+
+        * {
+          margin: 0;
+          font-size: 25px;
+        }
+
+        .icon {
+          margin-left: 15px;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .date-row {
+      padding-top: 30px;
+
+      .date-box {
+        display: inline-block;
+        border-radius: 37px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 10px 20px;
+        background: #ffffff;
+        position: relative;
+
+        &::before {
+          content: "";
+          background-image: url("../assets/imgs/calendar\ \(1\).png");
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -70px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          z-index: -1;
+        }
+
+        h4 {
+          color: #ff7575;
+          font-size: 20px;
+        }
+
+        p {
+          color: #a19d9d;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .account-row {
+      .account-box {
+        border-radius: 37px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        height: unset;
+        width: 100%;
+        background: #ffffff;
+
+        .button-inner {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+
+          img {
+            border-radius: 50%;
+            border: solid 8px #9aabe8;
+            box-sizing: border-box;
+          }
+  
+          > div {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            color: #aebee9;
+            text-transform: uppercase;
+          }
+  
+          h2 {
+            margin: 0;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .hours-row {
+      margin-top: 20px;
+
+      .hours-box {
+        border-radius: 37px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        display: flex;
+        flex-wrap: wrap;
+
+        .hour-box {
+          background: #646EFF;
+          border-radius: 500px;
+          padding: 10px;
+          color: #ffffff;
+          font-size: 16px;
+          margin: 10px;
+        }
+      }
+    }
+
+
+    .address-row {
+      margin-top: 20px;
+
+      .address-box {
+        border-radius: 37px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 44px;
+        }
+
+        * {
+          margin-left: 20px;
+          color: #2247FF;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .confirm-row {
+      padding: 20px 0;
+
+      .button {
+        background-color: #00FF77;
+        border-radius: 37px;
+        padding: 40px;
+      
+        .button-inner {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          img {
+            margin-right: 10px;
+          }
+
+          * {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+  .nav-bar {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 37px 10px 37px rgba(0, 0, 0, 0.5);
+
+    //> img {
+    //  position: absolute;
+    //  min-width: 362%;
+    //  left: -145%;
+    //  top: -745px;
+    //  z-index: -1;
+    //  height: 1242px;
+    //}
+
+    .bar-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+      background: #ffffff;
+
+      .button {
+        width: 77px;
+        height: 77px;
+        background-color: #7a9cdd;
+        border-style: solid;
+        border-color: #84a8ef;
+        border-radius: 50%;
+        border-top-width: 7px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 0;
+
+        &.left-btn,
+        &.right-btn {
+          top: -12px;
+        }
+
+        &.center-btn {
+          margin-top: 22px;
+
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/home-icon-silhouette.png");
+            background-color: #ffc60a !important;
+          }
+        }
+
+        &.left-btn {
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/ticket.png");
+          }
+        }
+
+        &.right-btn {
+          .btn-img {
+            -webkit-mask-box-image: url("../assets/imgs/round-account-button-with-user-inside.png");
+          }
+        }
+
+        .btn-img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #ffffff;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
