@@ -20,6 +20,7 @@ import {PharmacyDetailsPage} from "../pages/pharmacy-details/pharmacy-details";
 import {ClinicListPage} from "../pages/clinic-list/clinic-list";
 import {ClinicDetailsPage} from "../pages/clinic-details/clinic-details";
 import { ClinicReservePage } from '../pages/clinic-reserve/clinic-reserve';
+import {ConfirmReservationPage} from "../pages/confirm-reservation/confirm-reservation";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ClinicReservePage } from '../pages/clinic-reserve/clinic-reserve';
     PharmacyDetailsPage,
     ClinicListPage,
     ClinicDetailsPage,
-    ClinicReservePage
+    ClinicReservePage,
+    ConfirmReservationPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { ClinicReservePage } from '../pages/clinic-reserve/clinic-reserve';
     PharmacyDetailsPage,
     ClinicListPage,
     ClinicDetailsPage,
-    ClinicReservePage
+    ClinicReservePage,
+    ConfirmReservationPage
   ],
   providers: [
     StatusBar,

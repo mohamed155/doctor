@@ -4,13 +4,12 @@ import {FilterPage} from "../filter/filter";
 import {AccountPage} from "../account/account";
 import {TicketPage} from "../ticket/ticket";
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
-import {ConfirmReservationPage} from "../confirm-reservation/confirm-reservation";
 
 @Component({
-  selector: 'page-clinic-reserve',
-  templateUrl: 'clinic-reserve.html'
+  selector: 'page-confirm-reservation',
+  templateUrl: 'confirm-reservation.html'
 })
-export class ClinicReservePage {
+export class ConfirmReservationPage {
 
   constructor(public navCtrl: NavController) {
 
@@ -40,7 +39,4 @@ export class ClinicReservePage {
     this.navCtrl.push(RegisterDoctorPage);
   }
 
-  onGoToConfirmReservation() {
-    this.navCtrl.push(ConfirmReservationPage);
-  }
 }
