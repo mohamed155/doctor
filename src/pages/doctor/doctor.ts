@@ -36,7 +36,7 @@ export class DoctorPage {
   }
 
   onGoToRegisterDoctor() {
-    this.navCtrl.push(RegisterDoctorPage);
+    // this.navCtrl.push(RegisterDoctorPage);
   }
 
 }

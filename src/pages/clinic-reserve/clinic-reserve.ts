@@ -37,7 +37,7 @@ export class ClinicReservePage {
   }
 
   onGoToRegisterDoctor() {
-    this.navCtrl.push(RegisterDoctorPage);
+    // this.navCtrl.push(RegisterDoctorPage);
   }
 
   onGoToConfirmReservation() {
