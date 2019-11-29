@@ -8,14 +8,14 @@
     <h2>Account</h2>
   </div>
   <div class="form-container">
-    <form #f="ngForm" (ngSubmit)="onSubmit()">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <ion-item>
-        <ion-label stacked>Username</ion-label>
-        <ion-input name="firstname"></ion-input>
+        <ion-label stacked>Email</ion-label>
+        <ion-input name="email" ngModel required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Password</ion-label>
-        <ion-input name="password" type="Password"></ion-input>
+        <ion-input name="password" type="Password" ngModel required></ion-input>
       </ion-item>
       <ion-item no-lines class="item-button">
         <button ion-button clear block padding type="button" (click)="onGoToSignUp()">create a new account</button>
@@ -27,7 +27,7 @@
           continue with facebook
         </button>
       </ion-item>
-      <button ion-button type="submit" class="submit-button">Login</button>
+      <button ion-button type="submit" class="submit-button" [disabled]="!f.valid" >Login</button>
     </form>
   </div>
 </ion-content>

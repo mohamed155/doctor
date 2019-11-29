@@ -9,36 +9,66 @@
     <button ion-fab class="back-btn" (click)="onGoBack()"><ion-icon name="ios-undo"></ion-icon></button>
   </div>
   <div class="form-container">
-    <form #f="ngForm" (ngSubmit)="onSubmit()">
+    <ion-row>
+      <ion-col text-center>
+        <ion-thumbnail (click)="handleProfilePicClick()">
+          <img src="assets/imgs/invis-user.png" alt="Prodile image"/>
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <ion-row>
         <ion-col col-6>
           <ion-item>
             <ion-label stacked>First name</ion-label>
-            <ion-input name="firstname"></ion-input>
+            <ion-input name="first_name" ngModel required></ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-6>
           <ion-item>
             <ion-label stacked>Last name</ion-label>
-            <ion-input name="lastname"></ion-input>
+            <ion-input name="last_name" ngModel required></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-item>
         <ion-label stacked>Email</ion-label>
-        <ion-input name="firstname"></ion-input>
+        <ion-input name="email" ngModel required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Password</ion-label>
-        <ion-input name="password" type="Password"></ion-input>
+        <ion-input name="password" type="Password" ngModel required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Confirm password</ion-label>
-        <ion-input name="password" type="Password"></ion-input>
+        <ion-input name="password" type="Password" ngModel required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Phone number</ion-label>
-        <ion-input name="phone" type="number"></ion-input>
+        <ion-input name="phone" type="number" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Age</ion-label>
+        <ion-input name="age" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Date of birth</ion-label>
+        <ion-datetime pickerFormat="DD MM YYYY" displayFormat="DD/MM/YYYY" name="date_of_birth" ngModel required></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Gender</ion-label>
+        <ion-select name="gender" ngModel required>
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Address</ion-label>
+        <ion-input name="address" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Info</ion-label>
+        <ion-textarea name="info" ngModel required></ion-textarea>
       </ion-item>
       <ion-item no-lines class="facebook-button-item">
         <button ion-button type="button" round block>
@@ -46,7 +76,10 @@
           continue with facebook
         </button>
       </ion-item>
-      <button ion-button type="submit" class="submit-button">Register</button>
     </form>
   </div>
 </ion-content>
+
+<ion-footer>
+  <button ion-button class="submit-button" type="submit" [disabled]="!f.valid" (click)="f.valid && f.ngSubmit.emit()">Register</button>
+</ion-footer>

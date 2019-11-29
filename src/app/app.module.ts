@@ -21,6 +21,10 @@ import {ClinicListPage} from "../pages/clinic-list/clinic-list";
 import {ClinicDetailsPage} from "../pages/clinic-details/clinic-details";
 import { ClinicReservePage } from '../pages/clinic-reserve/clinic-reserve';
 import {ConfirmReservationPage} from "../pages/confirm-reservation/confirm-reservation";
+import { ConfigurationProvider } from '../providers/cofiguration/cofiguration';
+import {HttpModule} from "@angular/http";
+import { SharedProvider } from '../providers/shared/shared';
+import {Camera} from "@ionic-native/camera";
 
 @NgModule({
   declarations: [
@@ -44,7 +48,8 @@ import {ConfirmReservationPage} from "../pages/confirm-reservation/confirm-reser
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -69,7 +74,10 @@ import {ConfirmReservationPage} from "../pages/confirm-reservation/confirm-reser
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConfigurationProvider,
+    SharedProvider,
+    Camera
   ]
 })
 export class AppModule {
