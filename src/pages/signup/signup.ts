@@ -5,6 +5,8 @@ import {Http} from "@angular/http";
 import {ConfigurationProvider} from "../../providers/cofiguration/cofiguration";
 import {SharedProvider} from "../../providers/shared/shared";
 import {NgForm} from "@angular/forms";
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
 
 @Component({
   selector: 'page-signup',
@@ -12,7 +14,7 @@ import {NgForm} from "@angular/forms";
 })
 export class SignupPage {
 
-  profileImage;
+  avatar;
 
   constructor(
     public navCtrl: NavController,
@@ -21,7 +23,9 @@ export class SignupPage {
     public config: ConfigurationProvider,
     public shared: SharedProvider,
     public alertCtrl: AlertController,
-    public actionSheetCtrl: ActionSheetController
+    public actionSheetCtrl: ActionSheetController,
+    public camera: Camera,
+    public imagePicker: ImagePicker
     ) {
   }
 
@@ -35,11 +39,48 @@ export class SignupPage {
       buttons: [
         {
           text: 'Take a photo with camera',
-          handler: () => {}
+          handler: () => {
+            const loader = this.loadingCtrl.create();
+            loader.present();
+            const options: CameraOptions = {
+              quality: 100,
+              destinationType: this.camera.DestinationType.DATA_URL,
+              encodingType: this.camera.EncodingType.JPEG,
+              mediaType: this.camera.MediaType.PICTURE
+            }
+            this.camera.getPicture(options).then((imageData) => {
+             this.avatar = 'data:image/jpeg;base64,' + imageData;
+             loader.dismiss();
+            }, (err) => {
+              this.alertCtrl.create({
+                title: 'Error',
+                message: 'Could not take photo from camera'
+              }).present();
+              loader.dismiss();
+            });
+          }
         },
         {
           text: 'Choose an image from galary',
-          handler: () => {}
+          handler: () => {
+            const loader = this.loadingCtrl.create();
+            loader.present();
+            const options: ImagePickerOptions = {
+              maximumImagesCount: 1,
+              quality: 100,
+              outputType: 1
+            }
+            this.imagePicker.getPictures(options).then((results) => {
+              this.avatar = results[0];
+              loader.dismiss();
+            }, (err) => { 
+              this.alertCtrl.create({
+                title: 'Error',
+                message: 'Could not take photo from gallary'
+              }).present();
+              loader.dismiss();
+            });
+          }
         },
         {
           text: 'Cancel',
@@ -62,7 +103,7 @@ export class SignupPage {
         loader.dismiss();
         this.alertCtrl.create({
           title: 'Error',
-          message: err
+          message: 'Could not sign up now try again later'
         }).present();
       });
   }

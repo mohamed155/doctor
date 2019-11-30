@@ -12,7 +12,8 @@
     <ion-row>
       <ion-col text-center>
         <ion-thumbnail (click)="handleProfilePicClick()">
-          <img src="assets/imgs/invis-user.png" alt="Prodile image"/>
+          <img *ngIf="!avatar" src="assets/imgs/invis-user.png" alt="Prodile image"/>
+          <img *ngIf="avatar" [src]="avatar" alt="Prodile image"/>
         </ion-thumbnail>
       </ion-col>
     </ion-row>

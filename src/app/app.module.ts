@@ -25,6 +25,7 @@ import { ConfigurationProvider } from '../providers/cofiguration/cofiguration';
 import {HttpModule} from "@angular/http";
 import { SharedProvider } from '../providers/shared/shared';
 import {Camera} from "@ionic-native/camera";
+import { ImagePicker } from '@ionic-native/image-picker';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import {Camera} from "@ionic-native/camera";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigurationProvider,
     SharedProvider,
-    Camera
+    Camera,
+    ImagePicker
   ]
 })
 export class AppModule {

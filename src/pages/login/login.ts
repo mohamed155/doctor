@@ -43,7 +43,7 @@ export class LoginPage {
         loader.dismiss();
         this.alertCtrl.create({
           title: 'Error',
-          message: err
+          message: 'Could not login now try again later'
         }).present();
       });
   }
