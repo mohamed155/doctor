@@ -94,7 +94,8 @@ export class SignupPage {
   onSubmit(form: NgForm) {
     const loader = this.loadingCtrl.create();
     loader.present();
-    this.http.post(this.config.url + 'api/clinte_login', form.value).map(res => res.json())
+    this.http.post(this.config.url + 'api/clinte_login', 
+    {...form.value, avatar: this.avatar}).map(res => res.json())
       .subscribe(data => {
         this.navCtrl.setRoot(HomePage);
         this.shared.loggedUser = data.data;

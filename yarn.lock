@@ -93,10 +93,20 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@ionic-native/camera@^4.20.0":
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/camera/-/camera-4.20.0.tgz#db236497f880bd1b832e4223485f99875fedc570"
+  integrity sha512-WnfQq8RV+7ezOqpCyNx9Xgpy7Y8TZehGLSxZXnCqCbFZ72CpC70Q5AV/eTIRGiKkotx2U6nUopYF+gTj1cunFA==
+
 "@ionic-native/core@4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-4.4.2.tgz#867872b00399fc20f4f4ebe19fc303cb9f7677d4"
   integrity sha512-6OqX1gPnnL6SY+yBJxIvfjtUcWMIo4lmeufHvIwPVpPh2jSEM72nOZGBrcEkkV7ot2puferDFhEo6GGu4HareQ==
+
+"@ionic-native/image-picker@^4.20.0":
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/image-picker/-/image-picker-4.20.0.tgz#eafd559c6d5bbf708e7f48bf5ead2b9766ce5249"
+  integrity sha512-foaOKbmDehQFuE95K6fj0c6Lta16EsL0x2v6iwzcexKanmNITaE9JfAlmIexoIh2yDhazxFmPmsfVoPdut8j+Q==
 
 "@ionic-native/splash-screen@4.4.2":
   version "4.4.2"
@@ -959,6 +969,11 @@ cordova-common@^3.2.0:
     underscore "^1.8.3"
     which "^1.3.0"
 
+cordova-plugin-camera@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-camera/-/cordova-plugin-camera-4.1.0.tgz#6474a3e080c4662aa00fd7425705d301c693ddc0"
+  integrity sha512-fCLhWjWYn49q3X5xaypAPgTz6MAWSKFFQvD2Gpi5SuVlrRPRphtX2jIqR2zCBuDTBR082QVnlc+yUDXt65Mjgw==
+
 cordova-plugin-device@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/cordova-plugin-device/-/cordova-plugin-device-2.0.3.tgz#c2b41b7efd0455dd097f89356d85bfdd5dadeb0f"
@@ -983,6 +998,11 @@ cordova-plugin-statusbar@^2.4.2:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/cordova-plugin-statusbar/-/cordova-plugin-statusbar-2.4.3.tgz#cc557aef66c27484e0f7f045004040d03321f82d"
   integrity sha512-ThmXzl6QIKWFXf4wWw7Q/zpB+VKkz3VM958+5A0sXD4jmR++u7KnGttLksXshVwWr6lvGwUebLYtIyXwS4Ovcg==
+
+cordova-plugin-telerik-imagepicker@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-telerik-imagepicker/-/cordova-plugin-telerik-imagepicker-2.3.3.tgz#67c309eda940d980bdfa4b833edc575ab4797fd6"
+  integrity sha512-eL16EIxDueDo+dky5lNuzC+bDbKHPLPDfd/mtNpaCTNoT6iZqFd9/qJwSMnidXqCeExJZkN4ACsEHmtUA+vQ7Q==
 
 cordova-plugin-whitelist@^1.3.3:
   version "1.3.4"
