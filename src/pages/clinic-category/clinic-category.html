@@ -30,11 +30,12 @@
       </button>
     </ion-item>
     <div class="clinic-category-list">
-      <button ion-button block round justify-content-between class="clinic-category" (click)="onGoToClinicList()">
+      <button ion-button block round justify-content-between class="clinic-category" *ngFor='let category of categories'
+              (click)="onGoToClinicList(category.id)">
         <img src="assets/imgs/heart.png" alt="heart">
-        <h3>قلب و اوعية دموية</h3>
+        <h3>{{category.name}}</h3>
       </button>
-      <button ion-button block round justify-content-between class="clinic-category" (click)="onGoToClinicList()">
+      <!-- <button ion-button block round justify-content-between class="clinic-category" (click)="onGoToClinicList()">
         <img src="assets/imgs/stomach-ache.png" alt="heart">
         <h3>باطنة</h3>
       </button>
@@ -53,7 +54,7 @@
       <button ion-button block round justify-content-between class="clinic-category" (click)="onGoToClinicList()">
         <img src="assets/imgs/Group 143.png" alt="heart">
         <h3>أسنان</h3>
-      </button>
+      </button> -->
     </div>
   </div>
 </ion-content>

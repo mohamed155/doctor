@@ -32,7 +32,7 @@ export class HomePage {
   }
 
   onGoToRegisterDoctor() {
-    // this.navCtrl.push(RegisterDoctorPage);
+    this.navCtrl.push(RegisterDoctorPage);
   }
 
   onGoToClinicCategory() {

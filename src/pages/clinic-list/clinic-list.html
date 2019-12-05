@@ -38,16 +38,16 @@
     </div>
 
     <div class="clinic-list">
-      <button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">
+      <button ion-button clear dir="rtl" class="doctor-btn" *ngFor="let clinic of clinicList" (click)="onGoToClinicDetails()">
         <div class="doctor-info">
           <div class="left">
-            <h2><span class="prefix">دكتور</span> محمد احمد </h2>
+            <h2><span class="prefix">دكتور</span> {{clinic.name}} </h2>
             <div class="doctor-type">
               <img src="assets/imgs/Group%2043.png" alt="doctor-type">
               <p>قلب</p>
             </div>
           </div>
-          <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
+          <img [src]="config.url + clinic.avatar" alt="doctor-image">
         </div>
         <div class="doctor-rate">
           <span class="rate-label">تقييم الزوار</span>
@@ -80,131 +80,131 @@
         <button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>
       </button>
 
-      <button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">
-        <div class="doctor-info">
-          <div class="left">
-            <h2><span class="prefix">دكتور</span> محمد احمد </h2>
-            <div class="doctor-type">
-              <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-              <p>قلب</p>
-            </div>
-          </div>
-          <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
-        </div>
-        <div class="doctor-rate">
-          <span class="rate-label">تقييم الزوار</span>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <span class="visitors">زائر 800</span>
-        </div>
-        <div class="clinic-info">
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/maps-and-flags.png" alt="location-icon">
-            </div>
-            <h3>مصر الجديدة : شارع الخليفة المامون</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_100_.png" alt="price-icon">
-            </div>
-            <h3>سعر الكشف <span class="price">100</span> جنيه</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">
-            </div>
-            <h3>مدة الانتظار : 22 دقيقة</h3>
-          </div>
-        </div>
-        <button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>
-      </button>
+      <!--<button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">-->
+        <!--<div class="doctor-info">-->
+          <!--<div class="left">-->
+            <!--<h2><span class="prefix">دكتور</span> محمد احمد </h2>-->
+            <!--<div class="doctor-type">-->
+              <!--<img src="assets/imgs/Group%2043.png" alt="doctor-type">-->
+              <!--<p>قلب</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">-->
+        <!--</div>-->
+        <!--<div class="doctor-rate">-->
+          <!--<span class="rate-label">تقييم الزوار</span>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<span class="visitors">زائر 800</span>-->
+        <!--</div>-->
+        <!--<div class="clinic-info">-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/maps-and-flags.png" alt="location-icon">-->
+            <!--</div>-->
+            <!--<h3>مصر الجديدة : شارع الخليفة المامون</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_100_.png" alt="price-icon">-->
+            <!--</div>-->
+            <!--<h3>سعر الكشف <span class="price">100</span> جنيه</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">-->
+            <!--</div>-->
+            <!--<h3>مدة الانتظار : 22 دقيقة</h3>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>-->
+      <!--</button>-->
 
-      <button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">
-        <div class="doctor-info">
-          <div class="left">
-            <h2><span class="prefix">دكتور</span> محمد احمد </h2>
-            <div class="doctor-type">
-              <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-              <p>قلب</p>
-            </div>
-          </div>
-          <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
-        </div>
-        <div class="doctor-rate">
-          <span class="rate-label">تقييم الزوار</span>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <span class="visitors">زائر 800</span>
-        </div>
-        <div class="clinic-info">
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/maps-and-flags.png" alt="location-icon">
-            </div>
-            <h3>مصر الجديدة : شارع الخليفة المامون</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_100_.png" alt="price-icon">
-            </div>
-            <h3>سعر الكشف <span class="price">100</span> جنيه</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">
-            </div>
-            <h3>مدة الانتظار : 22 دقيقة</h3>
-          </div>
-        </div>
-        <button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>
-      </button>
+      <!--<button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">-->
+        <!--<div class="doctor-info">-->
+          <!--<div class="left">-->
+            <!--<h2><span class="prefix">دكتور</span> محمد احمد </h2>-->
+            <!--<div class="doctor-type">-->
+              <!--<img src="assets/imgs/Group%2043.png" alt="doctor-type">-->
+              <!--<p>قلب</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">-->
+        <!--</div>-->
+        <!--<div class="doctor-rate">-->
+          <!--<span class="rate-label">تقييم الزوار</span>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<span class="visitors">زائر 800</span>-->
+        <!--</div>-->
+        <!--<div class="clinic-info">-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/maps-and-flags.png" alt="location-icon">-->
+            <!--</div>-->
+            <!--<h3>مصر الجديدة : شارع الخليفة المامون</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_100_.png" alt="price-icon">-->
+            <!--</div>-->
+            <!--<h3>سعر الكشف <span class="price">100</span> جنيه</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">-->
+            <!--</div>-->
+            <!--<h3>مدة الانتظار : 22 دقيقة</h3>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>-->
+      <!--</button>-->
 
-      <button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">
-        <div class="doctor-info">
-          <div class="left">
-            <h2><span class="prefix">دكتور</span> محمد احمد </h2>
-            <div class="doctor-type">
-              <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-              <p>قلب</p>
-            </div>
-          </div>
-          <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
-        </div>
-        <div class="doctor-rate">
-          <span class="rate-label">تقييم الزوار</span>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <span class="visitors">زائر 800</span>
-        </div>
-        <div class="clinic-info">
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/maps-and-flags.png" alt="location-icon">
-            </div>
-            <h3>مصر الجديدة : شارع الخليفة المامون</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_100_.png" alt="price-icon">
-            </div>
-            <h3>سعر الكشف <span class="price">100</span> جنيه</h3>
-          </div>
-          <div class="info-row">
-            <div class="image-container">
-              <img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">
-            </div>
-            <h3>مدة الانتظار : 22 دقيقة</h3>
-          </div>
-        </div>
-        <button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>
-      </button>
+      <!--<button ion-button clear dir="rtl" class="doctor-btn" (click)="onGoToClinicDetails()">-->
+        <!--<div class="doctor-info">-->
+          <!--<div class="left">-->
+            <!--<h2><span class="prefix">دكتور</span> محمد احمد </h2>-->
+            <!--<div class="doctor-type">-->
+              <!--<img src="assets/imgs/Group%2043.png" alt="doctor-type">-->
+              <!--<p>قلب</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">-->
+        <!--</div>-->
+        <!--<div class="doctor-rate">-->
+          <!--<span class="rate-label">تقييم الزوار</span>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<ion-icon name="star"></ion-icon>-->
+          <!--<span class="visitors">زائر 800</span>-->
+        <!--</div>-->
+        <!--<div class="clinic-info">-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/maps-and-flags.png" alt="location-icon">-->
+            <!--</div>-->
+            <!--<h3>مصر الجديدة : شارع الخليفة المامون</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_100_.png" alt="price-icon">-->
+            <!--</div>-->
+            <!--<h3>سعر الكشف <span class="price">100</span> جنيه</h3>-->
+          <!--</div>-->
+          <!--<div class="info-row">-->
+            <!--<div class="image-container">-->
+              <!--<img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">-->
+            <!--</div>-->
+            <!--<h3>مدة الانتظار : 22 دقيقة</h3>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<button ion-button round class="reserve-btn" (click)="onGoToClinicDetails()">احجز الان</button>-->
+      <!--</button>-->
     </div>
   </div>
 

@@ -27,7 +27,7 @@ export class TicketPage {
   }
 
   onGoToRegisterDoctor() {
-    // this.navCtrl.push(RegisterDoctorPage);
+    this.navCtrl.push(RegisterDoctorPage);
   }
 
 }

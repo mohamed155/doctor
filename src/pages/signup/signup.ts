@@ -7,6 +7,7 @@ import {SharedProvider} from "../../providers/shared/shared";
 import {NgForm} from "@angular/forms";
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
+import { Facebook, FacebookLoginResponse  } from '@ionic-native/facebook';
 
 @Component({
   selector: 'page-signup',
@@ -25,7 +26,8 @@ export class SignupPage {
     public alertCtrl: AlertController,
     public actionSheetCtrl: ActionSheetController,
     public camera: Camera,
-    public imagePicker: ImagePicker
+    public imagePicker: ImagePicker,
+    public fb: Facebook
     ) {
   }
 
@@ -107,6 +109,13 @@ export class SignupPage {
           message: 'Could not sign up now try again later'
         }).present();
       });
+  }
+
+  fbLogin() {
+    this.fb.login(['public_profile', 'user_friends', 'email'])
+      .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+      .catch(e => console.log('Error logging into Facebook', e));
+
   }
 
 }
