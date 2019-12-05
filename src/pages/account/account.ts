@@ -27,7 +27,7 @@ export class AccountPage {
   }
 
   onGoToRegisterDoctor() {
-    // this.navCtrl.push(RegisterDoctorPage);
+    this.navCtrl.push(RegisterDoctorPage);
   }
 
 }

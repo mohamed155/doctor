@@ -27,7 +27,7 @@ export class FilterPage {
   }
 
   onGoToRegisterDoctor() {
-    // this.navCtrl.push(RegisterDoctorPage);
+    this.navCtrl.push(RegisterDoctorPage);
   }
 
   onGoToHome() {

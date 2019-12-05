@@ -26,6 +26,7 @@ import {HttpModule} from "@angular/http";
 import { SharedProvider } from '../providers/shared/shared';
 import {Camera} from "@ionic-native/camera";
 import { ImagePicker } from '@ionic-native/image-picker';
+import {Facebook} from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { ImagePicker } from '@ionic-native/image-picker';
     ConfigurationProvider,
     SharedProvider,
     Camera,
-    ImagePicker
+    ImagePicker,
+    Facebook
   ]
 })
 export class AppModule {

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import {AlertController, LoadingController, NavController} from 'ionic-angular';
-import {SignupPage} from "../signup/signup";
+import { AlertController, LoadingController, NavController } from 'ionic-angular';
+import { SignupPage } from "../signup/signup";
 import { HomePage } from '../home/home';
-import {Http} from "@angular/http";
-import {ConfigurationProvider} from "../../providers/cofiguration/cofiguration";
-import {NgForm} from "@angular/forms";
-import {SharedProvider} from "../../providers/shared/shared";
+import { Http } from "@angular/http";
+import { ConfigurationProvider } from "../../providers/cofiguration/cofiguration";
+import { NgForm } from "@angular/forms";
+import { SharedProvider } from "../../providers/shared/shared";
 // import {map} from 'rxjs/operators';
 import 'rxjs/add/operator/map';
+import { Facebook, FacebookLoginResponse  } from '@ionic-native/facebook';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class LoginPage {
     public http: Http,
     public config: ConfigurationProvider,
     public shared: SharedProvider,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public fb: Facebook
   ) {
 
   }
@@ -46,6 +48,13 @@ export class LoginPage {
           message: 'Could not login now try again later'
         }).present();
       });
+  }
+
+  fbLogin() {
+    this.fb.login(['public_profile', 'user_friends', 'email'])
+      .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+      .catch(e => console.log('Error logging into Facebook', e));
+
   }
 
 }
