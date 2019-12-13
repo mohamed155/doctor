@@ -30,48 +30,49 @@
       </button>
     </ion-item>
     <div class="clinic-category-list">
-      <button ion-button block round justify-content-between class="clinic-category">
+      <button ion-button block round justify-content-between class="clinic-category" *ngFor="let lab of testLabs"
+              (click)="onGoToTest(lab)">
         <img src="assets/imgs/Path 70.png" alt="heart">
         <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
+          <h3 no-margin>{{ lab.name }}</h3>
+          <h4 no-margin>{{ lab.city }}</h4>
         </div>
       </button>
-      <button ion-button block round justify-content-between class="clinic-category">
-        <img src="assets/imgs/Path 70.png" alt="heart">
-        <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
-        </div>
-      </button>
-      <button ion-button block round justify-content-between class="clinic-category">
-        <img src="assets/imgs/Path 70.png" alt="heart">
-        <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
-        </div>
-      </button>
-      <button ion-button block round justify-content-between class="clinic-category">
-        <img src="assets/imgs/Path 70.png" alt="heart">
-        <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
-        </div>
-      </button>
-      <button ion-button block round justify-content-between class="clinic-category">
-        <img src="assets/imgs/Path 70.png" alt="heart">
-        <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
-        </div>
-      </button>
-      <button ion-button block round justify-content-between class="clinic-category">
-        <img src="assets/imgs/Path 70.png" alt="heart">
-        <div class="test-right" text-right>
-          <h3 no-margin>معمل البرج</h3>
-          <h4 no-margin>زهراء مدينة نصر</h4>
-        </div>
-      </button>
+      <!--<button ion-button block round justify-content-between class="clinic-category">-->
+      <!--<img src="assets/imgs/Path 70.png" alt="heart">-->
+      <!--<div class="test-right" text-right>-->
+      <!--<h3 no-margin>معمل البرج</h3>-->
+      <!--<h4 no-margin>زهراء مدينة نصر</h4>-->
+      <!--</div>-->
+      <!--</button>-->
+      <!--<button ion-button block round justify-content-between class="clinic-category">-->
+      <!--<img src="assets/imgs/Path 70.png" alt="heart">-->
+      <!--<div class="test-right" text-right>-->
+      <!--<h3 no-margin>معمل البرج</h3>-->
+      <!--<h4 no-margin>زهراء مدينة نصر</h4>-->
+      <!--</div>-->
+      <!--</button>-->
+      <!--<button ion-button block round justify-content-between class="clinic-category">-->
+      <!--<img src="assets/imgs/Path 70.png" alt="heart">-->
+      <!--<div class="test-right" text-right>-->
+      <!--<h3 no-margin>معمل البرج</h3>-->
+      <!--<h4 no-margin>زهراء مدينة نصر</h4>-->
+      <!--</div>-->
+      <!--</button>-->
+      <!--<button ion-button block round justify-content-between class="clinic-category">-->
+      <!--<img src="assets/imgs/Path 70.png" alt="heart">-->
+      <!--<div class="test-right" text-right>-->
+      <!--<h3 no-margin>معمل البرج</h3>-->
+      <!--<h4 no-margin>زهراء مدينة نصر</h4>-->
+      <!--</div>-->
+      <!--</button>-->
+      <!--<button ion-button block round justify-content-between class="clinic-category">-->
+      <!--<img src="assets/imgs/Path 70.png" alt="heart">-->
+      <!--<div class="test-right" text-right>-->
+      <!--<h3 no-margin>معمل البرج</h3>-->
+      <!--<h4 no-margin>زهراء مدينة نصر</h4>-->
+      <!--</div>-->
+      <!--</button>-->
     </div>
   </div>
 </ion-content>

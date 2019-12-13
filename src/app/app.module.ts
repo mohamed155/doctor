@@ -27,6 +27,7 @@ import { SharedProvider } from '../providers/shared/shared';
 import {Camera} from "@ionic-native/camera";
 import { ImagePicker } from '@ionic-native/image-picker';
 import {Facebook} from '@ionic-native/facebook';
+import {TestDetailsPage} from "../pages/test-details/test-details";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {Facebook} from '@ionic-native/facebook';
     ClinicListPage,
     ClinicDetailsPage,
     ClinicReservePage,
-    ConfirmReservationPage
+    ConfirmReservationPage,
+    TestDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,8 @@ import {Facebook} from '@ionic-native/facebook';
     ClinicListPage,
     ClinicDetailsPage,
     ClinicReservePage,
-    ConfirmReservationPage
+    ConfirmReservationPage,
+    TestDetailsPage
   ],
   providers: [
     StatusBar,

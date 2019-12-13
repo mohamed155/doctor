@@ -75,7 +75,7 @@ export class SignupPage {
             this.imagePicker.getPictures(options).then((results) => {
               this.avatar = results[0];
               loader.dismiss();
-            }, (err) => { 
+            }, (err) => {
               this.alertCtrl.create({
                 title: 'Error',
                 message: 'Could not take photo from gallary'
@@ -96,7 +96,7 @@ export class SignupPage {
   onSubmit(form: NgForm) {
     const loader = this.loadingCtrl.create();
     loader.present();
-    this.http.post(this.config.url + 'api/clinte_login', 
+    this.http.post(this.config.url + 'api/client_register',
     {...form.value, avatar: this.avatar}).map(res => res.json())
       .subscribe(data => {
         this.navCtrl.setRoot(HomePage);

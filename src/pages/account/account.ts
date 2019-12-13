@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {HomePage} from "../home/home";
 import { TicketPage } from '../ticket/ticket';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
+import {SharedProvider} from "../../providers/shared/shared";
 
 @Component({
   selector: 'page-account',
@@ -10,7 +11,7 @@ import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 })
 export class AccountPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public shared: SharedProvider) {
 
   }
 

@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, LoadingController, AlertController} from 'ionic-angular';
 import {AccountPage} from "../account/account";
-import { TicketPage } from '../ticket/ticket';
-import { LoginPage } from '../login/login';
+import {TicketPage} from '../ticket/ticket';
+import {LoginPage} from '../login/login';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 import {FilterPage} from "../filter/filter";
 import {ClinicListPage} from "../clinic-list/clinic-list";
-import { Http, Headers } from '@angular/http';
-import { SharedProvider } from '../../providers/shared/shared';
-import { ConfigurationProvider } from '../../providers/cofiguration/cofiguration';
+import {Http, Headers} from '@angular/http';
+import {SharedProvider} from '../../providers/shared/shared';
+import {ConfigurationProvider} from '../../providers/cofiguration/cofiguration';
 
 @Component({
   selector: 'page-clinic-category',
@@ -25,12 +25,13 @@ export class ClinicCategoryPage {
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
     public config: ConfigurationProvider
-    ) {
-      const loader = this.loadingCtrl.create();
-      loader.present();
-      const headers = new Headers();
-      headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
-      this.http.get(config.url + 'api/specialties', {headers}).map(res => res.json())
+  ) {
+    const loader = this.loadingCtrl.create();
+    loader.present();
+    // const headers = new Headers();
+    // headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
+    this.http.get(config.url + 'api/specialties?api_token=' + this.shared.loggedUser.api_token)
+      .map(res => res.json())
       .subscribe(data => {
         this.categories = data.data;
         loader.dismiss();
@@ -40,7 +41,7 @@ export class ClinicCategoryPage {
           title: 'Error',
           message: 'Could not connect to server'
         }).present();
-      })
+      });
   }
 
   onGoToFilter() {

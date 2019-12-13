@@ -8,6 +8,7 @@ import {ClinicCategoryPage} from "../clinic-category/clinic-category";
 import {DoctorPage} from "../doctor/doctor";
 import {PharmacyPage} from "../pharmacy/pharmacy";
 import { TestPage } from '../test/test';
+import {SharedProvider} from "../../providers/shared/shared";
 
 @Component({
   selector: 'page-home',
@@ -15,7 +16,7 @@ import { TestPage } from '../test/test';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public shared: SharedProvider) {
 
   }
 

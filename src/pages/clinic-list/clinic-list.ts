@@ -33,7 +33,8 @@ export class ClinicListPage {
     loader.present();
     const headers = new Headers();
     headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
-    this.http.get(config.url + 'api/client/specialties/' + this.category_id, {headers}).map(res => res.json())
+    this.http.get(config.url + 'api/specialties/' + this.category_id + '?api_token=' + this.shared.loggedUser.api_token)
+      .map(res => res.json())
       .subscribe(data => {
         loader.dismiss();
         this.clinicList = data.data.partners;
