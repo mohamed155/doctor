@@ -68,7 +68,7 @@ export class PharmacyPage {
       const headers = new Headers();
       headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
       this.http.post(this.config.url + 'api/clients/roostat?api_token=' + this.shared.loggedUser.api_token,
-        {headers}).map(res => res.json())
+        {image: this.rostatFile},{headers}).map(res => res.json())
         .subscribe(data => {
           loader.dismiss();
         }, () => {
