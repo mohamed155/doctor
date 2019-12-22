@@ -49,7 +49,7 @@ export class SignupPage {
               destinationType: this.camera.DestinationType.DATA_URL,
               encodingType: this.camera.EncodingType.JPEG,
               mediaType: this.camera.MediaType.PICTURE
-            }
+            };
             this.camera.getPicture(options).then((imageData) => {
              this.avatar = 'data:image/jpeg;base64,' + imageData;
              loader.dismiss();
