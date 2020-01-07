@@ -17,10 +17,15 @@
   <div class="page-title">
     <h1 text-center margin-bottom>Account</h1>
     <div class="account-title">
-      <ion-thumbnail>
-        <img src="assets/imgs/download.png" alt="user-image">
+      <ion-thumbnail> 
+        <div *ngIf="shared.loggedUser.avatar == null">
+          <img style="width: 100px;" src="assets/imgs/invis-user.png"/>
+        </div>  
+        <div *ngIf="shared.loggedUser.avatar != null">
+          <img style="width: 100px;" [src]="shared.loggedUser.avatar"/>
+        </div> 
       </ion-thumbnail>
-      <h2>Lena</h2>
+      <h2>{{shared.loggedUser.first_name}}</h2>
     </div>
   </div>
 

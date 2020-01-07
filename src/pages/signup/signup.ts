@@ -101,8 +101,10 @@ export class SignupPage {
       .subscribe(data => {
         this.navCtrl.setRoot(HomePage);
         this.shared.loggedUser = data.data;
+        console.log(this.shared.loggedUser);
         loader.dismiss();
-      }, (err) => {
+      }, (err) => { 
+        console.log(err);
         loader.dismiss();
         this.alertCtrl.create({
           title: 'Error',

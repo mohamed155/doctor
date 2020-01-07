@@ -16,8 +16,13 @@
   <div class="page-title">
     <h1>Home</h1>
     <ion-item no-lines>
-      <ion-avatar item-start>
-        <img src="assets/imgs/download.png" alt="user-image">
+      <ion-avatar item-start> 
+        <div *ngIf="shared.loggedUser.avatar == null">
+            <img src="assets/imgs/invis-user.png" alt="user-image">
+        </div> 
+        <div *ngIf="shared.loggedUser.avatar != null">
+            <img [src]="shared.loggedUser.avatar" alt="user-image">
+        </div>
       </ion-avatar>
       <h3>Welcome</h3>
       <h2>{{shared.loggedUser.first_name}}</h2>
@@ -25,13 +30,15 @@
   </div>
   <div class="home-grid">
     <ion-grid>
-      <ion-row>
-        <ion-col col-6 text-center>
+      <ion-row> 
+        <!-- 
+  <ion-col col-6 text-center>
           <button ion-button (click)="onGoToClinicCategory()">
             <img src="assets/imgs/hospital.png" alt="button-image">
             <p>Clinic</p>
           </button>
         </ion-col>
+        -->
         <ion-col col-6 text-center>
           <button ion-button (click)="onGoToDoctor()">
             <img src="assets/imgs/doctor.png" alt="button-image">

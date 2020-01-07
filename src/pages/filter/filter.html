@@ -15,51 +15,38 @@
   </div>
   <div class="page-title" text-center>
     <ion-icon name="color-filter"></ion-icon>
-  </div>
+  </div> 
+
   <div class="page-content">
-    <ion-list padding>
+    <ion-list padding> 
+        <ion-item dir="rtl" no-lines>
+            <ion-label>التخصص</ion-label>
+            <ion-select (ionChange)=" getSpecialityID($event)" interface="popover">
+              <div *ngFor="let s of specialities">
+                <ion-option value="{{s.id}}">{{s.name}}</ion-option> 
+              </div>
+            </ion-select>
+        </ion-item>
       <ion-item dir="rtl" no-lines>
         <ion-label>المنطقة</ion-label>
-        <ion-select>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
+        <ion-select (ionChange)="GetAllCities($event)" interface="popover">
+          <div  *ngFor="let g of governrates">
+            <ion-option value="{{g.id}}">{{g.name}}</ion-option>
+          </div>
         </ion-select>
       </ion-item>
       <ion-item dir="rtl" no-lines>
-        <ion-label>المنطقة</ion-label>
-        <ion-select>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
+        <ion-label>المدينة</ion-label>
+        <ion-select (ionChange)="FilterDrs($event)" interface="popover"> 
+          <div *ngFor="let c of cities">
+               <ion-option   value="{{c.id}}">{{c.name}}</ion-option>
+          </div>
         </ion-select>
-      </ion-item>
-      <ion-item dir="rtl" no-lines>
-        <ion-label>المنطقة</ion-label>
-        <ion-select>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item dir="rtl" no-lines>
-        <ion-label>المنطقة</ion-label>
-        <ion-select>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-          <ion-option>منطقة 1</ion-option>
-        </ion-select>
-      </ion-item>
+      </ion-item>   
+
     </ion-list>
-  </div>
+  </div> 
+  <!-- drs design will be set here-->
 </ion-content>
 
 <ion-footer>

@@ -27,7 +27,8 @@ export class ClinicListPage {
     public http: Http,
     public config: ConfigurationProvider,
     public shared: SharedProvider
-  ) {
+  ) { 
+    
     this.category_id = this.navParams.get('category_id');
     const loader = this.loadingCtrl.create();
     loader.present();

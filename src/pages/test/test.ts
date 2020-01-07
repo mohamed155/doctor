@@ -31,7 +31,8 @@ export class TestPage {
     this.http.get(`http://mashfac.com/api/clients/medical?api_token=${shared.loggedUser.api_token}`)
       .map(res => res.json())
       .subscribe(data => {
-        this.testLabs = data.data;
+        this.testLabs = data.data; 
+        console.log(this.testLabs);
         loader.dismiss();
       }, () => {
         loader.dismiss();

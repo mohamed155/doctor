@@ -28,6 +28,7 @@ import {Camera} from "@ionic-native/camera";
 import { ImagePicker } from '@ionic-native/image-picker';
 import {Facebook} from '@ionic-native/facebook';
 import {TestDetailsPage} from "../pages/test-details/test-details";
+import { SpecialitiesPage } from "../pages/specialities/specialities";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {TestDetailsPage} from "../pages/test-details/test-details";
     ClinicDetailsPage,
     ClinicReservePage,
     ConfirmReservationPage,
-    TestDetailsPage
+    TestDetailsPage,
+    SpecialitiesPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import {TestDetailsPage} from "../pages/test-details/test-details";
     ClinicDetailsPage,
     ClinicReservePage,
     ConfirmReservationPage,
-    TestDetailsPage
+    TestDetailsPage,
+    SpecialitiesPage
   ],
   providers: [
     StatusBar,

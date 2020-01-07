@@ -14,97 +14,88 @@
   </div>
 
   <div class="page-title">
-    <img src="assets/imgs/doctor.png" alt="doctor-icon" />
+    <img src="assets/imgs/doctor.png" alt="doctor-icon"/>
   </div>
 
   <div class="page-content">
     <div dir="rtl" class="doctor-btn">
       <div class="doctor-info">
         <div class="left">
-          <h2><span class="prefix">دكتور</span> محمد احمد </h2>
+          <h2><span class="prefix">دكتور</span> {{SpecificDrData.name}} </h2>
           <div class="doctor-type">
             <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-            <p>قلب</p>
+            <p *ngIf="SpecificDrData.specialty_id">{{SpecificDrData.specialty_id.name}}</p>
           </div>
         </div>
         <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
       </div>
       <div class="doctor-rate" text-center>
-        <span class="rate-label">تقييم الزوار</span>
+        <!--
+            <span class="rate-label">تقييم الزوار</span>
         <ion-icon name="star"></ion-icon>
         <ion-icon name="star"></ion-icon>
         <ion-icon name="star"></ion-icon>
         <ion-icon name="star"></ion-icon>
         <span class="visitors">زائر 800</span>
+        -->
+
       </div>
       <div class="clinic-info">
         <div class="info-row">
           <div class="image-container">
             <img src="assets/imgs/maps-and-flags.png" alt="location-icon">
           </div>
-          <h3>مصر الجديدة : شارع الخليفة المامون</h3>
+          <h3 *ngIf="SpecificDrData.clinic" dir="rtl">{{SpecificDrData.clinic.city_id.city_name}}
+            : {{SpecificDrData.clinic.address}} </h3>
         </div>
         <div class="info-row">
           <div class="image-container">
             <img src="assets/imgs/XMLID_100_.png" alt="price-icon">
           </div>
-          <h3>سعر الكشف <span class="price">100</span> جنيه</h3>
+          <h3 *ngIf="SpecificDrData.clinic">سعر الكشف <span class="price">{{SpecificDrData.clinic.price}}</span> جنيه
+          </h3>
         </div>
         <div class="info-row">
           <div class="image-container">
             <img src="assets/imgs/XMLID_6_.png" alt="waiting-icon">
           </div>
-          <h3>مدة الانتظار : 22 دقيقة</h3>
+          <h3 *ngIf="SpecificDrData.clinic">مدة الانتظار : {{SpecificDrData.clinic.waiting_time}}</h3>
         </div>
       </div>
     </div>
 
-    <div class="resevation-row" text-center>
-      <button class="reserve-btn" ion-button round (click)="onGoToReserveClinic()">احجز الان</button>
-    </div>
-
     <div class="slider-container" dir="rtl">
       <div class="slider-title" text-center>
-        <img src="assets/imgs/calendar%20(1).png" alt="calendar-icon" />
-        <h2>مواعيد</h2>
+        <img src="assets/imgs/calendar%20(1).png" alt="calendar-icon"/>
+        <h2></h2>
       </div>
-      <ion-slides slidesPerView="2.2" spaceBetween="20" dir="rtl">
-        <ion-slide>
-          <div class="date-box">
-            <h4>اليوم</h4>
-            <p>من 12:00م الى 8:00م</p>
+      <!-- <ion-slides slidesPerView="2"  dir="rtl"> -->
+      <ion-list *ngIf="this.SpecificDrData">
+        <ion-item *ngFor="let date of this.SpecificDrData['work_days_arr']; let i = index" no-lines>
+          <div *ngIf="date.length  > 0" class="date-box">
+            <h4 style="text-align: center;">التاريخ</h4>
+            <h4 style="text-align: center;">{{date[0]['day']}}</h4>
+            <h4 style="text-align: center">{{ dates[i] }}</h4>
+            <p style="text-align: center;" *ngFor="let time  of date"> من {{time.from_date | date : 'shortTime'}}
+              الى {{time.to_date | date : 'shortTime'}}</p>
+            <div style="text-align: center;">
+              <button class="reserve-date" ion-button small round
+                      (click)="onGoToReserveClinic(SpecificDrData.id , SpecificDrData, date, dates[i], date[0].id)">احجز الان
+              </button>
+            </div>
           </div>
-          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
-        </ion-slide>
-        <ion-slide>
-          <div class="date-box">
-            <h4>اليوم</h4>
-            <p>من 12:00م الى 8:00م</p>
+          <div *ngIf="date.length == 0" class="date-box">
+            <h4 style="text-align: center;">غير متاح</h4>
           </div>
-          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
-        </ion-slide>
-        <ion-slide>
-          <div class="date-box">
-            <h4>اليوم</h4>
-            <p>من 12:00م الى 8:00م</p>
-          </div>
-          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
-        </ion-slide>
-        <ion-slide>
-          <div class="date-box">
-            <h4>اليوم</h4>
-            <p>من 12:00م الى 8:00م</p>
-          </div>
-          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
-        </ion-slide>
-      </ion-slides>
+        </ion-item>
+      </ion-list>
     </div>
 
     <div class="clinic-info-box" dir="rtl" margin text-center>
-      <img src="assets/imgs/2497414.png" alt="lamb-icon" />
+      <img src="assets/imgs/2497414.png" alt="lamb-icon"/>
       <div class="info-inner" text-start>
         <h1>معلومات عن الدكتور</h1>
-        <p>اخصائي جلدية</p>
+        <p *ngIf="SpecificDrData.clinic">{{SpecificDrData.clinic.info}}</p>
       </div>
     </div>
 
@@ -119,11 +110,8 @@
         <h2>تقييم الدكتور</h2>
       </button>
     </div>
-
   </div>
-
 </ion-content>
-
 <ion-footer>
   <div class="nav-bar">
     <div class="bar-inner">
@@ -145,3 +133,28 @@
     </div>
   </div>
 </ion-footer>
+<!--
+          <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
+        </ion-slide>
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
+        </ion-slide>
+        <ion-slide>
+          <div class="date-box">
+            <h4>اليوم</h4>
+            <p>من 12:00م الى 8:00م</p>
+          </div>
+          <button class="reserve-date" ion-button small round (click)="onGoToReserveClinic()">احجز الان</button>
+        </ion-slide
+        -->
+
+<!-- </ion-slides> -->

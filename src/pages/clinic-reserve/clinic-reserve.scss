@@ -385,6 +385,13 @@ page-clinic-reserve {
           color: #ffffff;
           font-size: 16px;
           margin: 10px;
+          border: solid #646EFF 2px;
+
+          &.selected {
+            background: #ffffff;
+            border: solid #646EFF 2px;
+            color:  #646EFF ;
+          }
         }
       }
     }

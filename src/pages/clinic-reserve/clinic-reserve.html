@@ -22,15 +22,17 @@
 
     <div class="doctor-info" dir="rtl">
       <div class="left">
-        <h2><span class="prefix">دكتور</span> محمد احمد </h2>
+        <h2><span class="prefix">دكتور</span> <br> {{alldata.name}} </h2>
         <div class="doctor-type">
           <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-          <p>قلب</p>
+          <p *ngIf="alldata.specialty_id">{{alldata.specialty_id.name}}</p>
         </div>
       </div>
       <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
     </div>
-    <div class="doctor-rate" text-center dir="rtl">
+    <!--
+      clients/booking/1/selected_date?=&day=2019-12-19&work_time_id=4
+      <div class="doctor-rate" text-center dir="rtl">
       <span class="rate-label">تقييم الزوار</span>
       <ion-icon name="star"></ion-icon>
       <ion-icon name="star"></ion-icon>
@@ -38,11 +40,12 @@
       <ion-icon name="star"></ion-icon>
       <span class="visitors">زائر 800</span>
     </div>
-
+    -->
     <div class="date-row" text-center padding>
       <div class="date-box" padding>
         <h4>اليوم</h4>
-        <p>من 12:00م الى 8:00م</p>
+        <p> من {{dateDate[0].from_date | date : 'shortTime'}}
+          الى {{dateDate[0].to_date | date : 'shortTime'}}</p>
       </div>
     </div>
 
@@ -55,27 +58,23 @@
 
     <div class="hours-row">
       <div class="hours-box" padding>
-        <div class="hour-box">3:45am</div>
-        <div class="hour-box">3:45am</div>
-        <div class="hour-box">3:45am</div>
-        <div class="hour-box">3:45am</div>
-        <div class="hour-box">3:45am</div>
-        <div class="hour-box">3:45am</div>
+        <div class="hour-box" *ngFor="let time of AllData" (click)="selectedTime = time"
+             [ngClass]="{'selected': selectedTime == time}"
+        >{{time}}</div>
       </div>
     </div>
-
     <div class="address-row" dir="rtl">
       <div class="address-box" padding>
         <img src="assets/imgs/Path 70.png" alt="marker" />
-        <h2>شارع النزهة</h2>
-        <p>شارع النزهة</p>
+        <h2 *ngIf="alldata.clinic">{{alldata.clinic.city_id.city_name}}</h2>
+        <p *ngIf="alldata.clinic"></p>
       </div>
     </div>
 
     <div class="address-row" dir="rtl">
       <div class="address-box" padding>
         <img src="assets/imgs/XMLID_100_2.png" alt="marker" />
-        <h2>جنيه 200</h2>
+        <h2>جنيه {{alldata.clinic.price}} </h2>
       </div>
     </div>
 

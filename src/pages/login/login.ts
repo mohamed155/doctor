@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController, LoadingController, NavController } from 'ionic-angular';
 import { SignupPage } from "../signup/signup";
 import { HomePage } from '../home/home';
-import { Http } from "@angular/http";
+import { Http,Headers } from "@angular/http";
 import { ConfigurationProvider } from "../../providers/cofiguration/cofiguration";
 import { NgForm } from "@angular/forms";
 import { SharedProvider } from "../../providers/shared/shared";
@@ -35,11 +35,13 @@ export class LoginPage {
 
   onSubmit(form: NgForm) {
     const loader = this.loadingCtrl.create();
-    loader.present();
-    this.http.post(this.config.url + 'api/clinte_login', form.value).map(res => res.json())
+    loader.present(); 
+
+    this.http.post(this.config.url + 'api/clinte_login?', form.value).map(res => res.json())
       .subscribe(data => {
         this.navCtrl.setRoot(HomePage);
-        this.shared.loggedUser = data.data;
+        this.shared.loggedUser = data.data; 
+        console.log(this.shared.loggedUser);
         loader.dismiss();
       }, (err) => {
         loader.dismiss();
@@ -54,7 +56,6 @@ export class LoginPage {
     this.fb.login(['public_profile', 'user_friends', 'email'])
       .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
       .catch(e => console.log('Error logging into Facebook', e));
-
   }
 
 }

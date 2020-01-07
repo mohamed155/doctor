@@ -70,8 +70,9 @@ export class PharmacyPage {
       this.http.post(this.config.url + 'api/clients/roostat?api_token=' + this.shared.loggedUser.api_token,
         {image: this.rostatFile},{headers}).map(res => res.json())
         .subscribe(data => {
-          loader.dismiss();
-        }, () => {
+          loader.dismiss(); 
+        }, (err) => { 
+          console.log(err);
           this.alertCtrl.create({
             title: 'Error',
             message: 'Could not upload photo to server'

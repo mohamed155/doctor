@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import {AccountPage} from "../account/account";
 import { TicketPage } from '../ticket/ticket';
 import { LoginPage } from '../login/login';
@@ -9,6 +9,10 @@ import {DoctorPage} from "../doctor/doctor";
 import {PharmacyPage} from "../pharmacy/pharmacy";
 import { TestPage } from '../test/test';
 import {SharedProvider} from "../../providers/shared/shared";
+import {Http} from "@angular/http";
+import {ConfigurationProvider} from "../../providers/cofiguration/cofiguration";
+import { SpecialitiesPage } from '../specialities/specialities';
+
 
 @Component({
   selector: 'page-home',
@@ -16,7 +20,11 @@ import {SharedProvider} from "../../providers/shared/shared";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public shared: SharedProvider) {
+  constructor(public config: ConfigurationProvider,
+     public http : Http ,
+     public loadingCtrl : LoadingController , 
+     public navCtrl: NavController, 
+     public shared: SharedProvider) {
 
   }
 
@@ -40,8 +48,9 @@ export class HomePage {
     this.navCtrl.push(ClinicCategoryPage);
   }
 
-  onGoToDoctor() {
-    this.navCtrl.push(DoctorPage);
+  onGoToDoctor() { 
+      //this.navCtrl.push(DoctorPage);
+      this.navCtrl.push(SpecialitiesPage);
   }
 
   onGoToPharmacy() {

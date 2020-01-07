@@ -28,13 +28,13 @@ export class ClinicCategoryPage {
   ) {
     const loader = this.loadingCtrl.create();
     loader.present();
-    // const headers = new Headers();
-    // headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
-    this.http.get(config.url + 'api/specialties?api_token=' + this.shared.loggedUser.api_token)
+     const headers = new Headers();
+    headers.append('token', `Bearer ${this.shared.loggedUser.api_token}`);
+    this.http.get(this.config.url + 'api/specialties?api_token=' + this.shared.loggedUser.api_token)
       .map(res => res.json())
       .subscribe(data => {
         this.categories = data.data;
-        loader.dismiss();
+        loader.dismiss(); 
       }, () => {
         loader.dismiss();
         this.alertCtrl.create({
