@@ -29,6 +29,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
 import {Facebook} from '@ionic-native/facebook';
 import {TestDetailsPage} from "../pages/test-details/test-details";
 import { SpecialitiesPage } from "../pages/specialities/specialities";
+import {FileTransfer} from "@ionic-native/file-transfer";
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { SpecialitiesPage } from "../pages/specialities/specialities";
     SharedProvider,
     Camera,
     ImagePicker,
-    Facebook
+    Facebook,
+    FileTransfer
   ]
 })
 export class AppModule {

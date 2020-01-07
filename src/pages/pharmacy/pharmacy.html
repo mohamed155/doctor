@@ -23,6 +23,7 @@
     </div>
     <h3 class="page-text">ارفع الروشيتة</h3>
     <div class="bottom-row" text-center>
+      <input type="file" name="file" (change)="changeListener($event.target.files)">
       <button class="upload-btn" ion-button clear (click)="uploadRostatFile()">
         <img src="assets/imgs/upload%20btn.png" alt="upload">
       </button>

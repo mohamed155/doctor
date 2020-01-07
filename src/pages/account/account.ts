@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {LoadingController, NavController} from 'ionic-angular';
 import {HomePage} from "../home/home";
 import { TicketPage } from '../ticket/ticket';
 import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 import {SharedProvider} from "../../providers/shared/shared";
+import {Http, Headers} from "@angular/http";
+import {ConfigurationProvider} from "../../providers/cofiguration/cofiguration";
 
 @Component({
   selector: 'page-account',
@@ -11,8 +13,19 @@ import {SharedProvider} from "../../providers/shared/shared";
 })
 export class AccountPage {
 
-  constructor(public navCtrl: NavController, public shared: SharedProvider) {
+  historyData;
 
+  constructor(public navCtrl: NavController, public config: ConfigurationProvider, public shared: SharedProvider, public loadingCtrl: LoadingController, public http: Http) {
+    const loader = this.loadingCtrl.create();
+    loader.present();
+    const headers = new Headers();
+    headers.append('api_token', 'Bearer ' + this.shared.loggedUser.api_token);
+    this.http.get(this.config.url + 'api/clients/booking/all?api_token=' + this.shared.loggedUser.api_token, {headers})
+      .map(res => res.json())
+      .subscribe(data => {
+        loader.dismiss();
+        this.historyData = data;
+      })
   }
 
   onGoBack() {

@@ -17,13 +17,13 @@
   <div class="page-title">
     <h1 text-center margin-bottom>Account</h1>
     <div class="account-title">
-      <ion-thumbnail> 
+      <ion-thumbnail>
         <div *ngIf="shared.loggedUser.avatar == null">
           <img style="width: 100px;" src="assets/imgs/invis-user.png"/>
-        </div>  
+        </div>
         <div *ngIf="shared.loggedUser.avatar != null">
           <img style="width: 100px;" [src]="shared.loggedUser.avatar"/>
-        </div> 
+        </div>
       </ion-thumbnail>
       <h2>{{shared.loggedUser.first_name}}</h2>
     </div>
@@ -76,19 +76,7 @@
           History
         </ion-col>
         <ion-col col-8>
-          <div>DOCTOR MOHAMED</div>
-          <div>DOCTOR MOHAMED</div>
-          <div>DOCTOR MOHAMED</div>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-4>
-          History
-        </ion-col>
-        <ion-col col-8>
-          <div>DOCTOR MOHAMED</div>
-          <div>DOCTOR MOHAMED</div>
-          <div>DOCTOR MOHAMED</div>
+          <div *ngFor="let item of historyData">{{item.doctor.name}}</div>
         </ion-col>
       </ion-row>
     </ion-grid>

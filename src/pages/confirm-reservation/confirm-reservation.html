@@ -1,7 +1,7 @@
 <ion-content>
 
   <div class="title-bar">
-    <button ion-fab class="back-btn" (click)="onGoBack()">
+    <button ion-fab class="back-btn" (click)="onGoToHome()">
       <ion-icon name="ios-undo"></ion-icon>
     </button>
     <button ion-fab class="back-btn" (click)="onGoToRegisterDoctor()">
@@ -22,14 +22,14 @@
 
     <div class="doctor-info" dir="rtl">
       <div class="left">
-        <h2><span class="prefix">دكتور</span> Doctor name </h2>
+        <h2><span class="prefix">دكتور</span> {{alldata.name}} </h2>
         <div class="doctor-type">
           <img src="assets/imgs/Group%2043.png" alt="doctor-type">
-          <p>قلب</p>
+          <p>{{alldata.specialty_id.name}}</p>
         </div>
       </div>
       <img src="assets/imgs/doctor-img-cropped.png" alt="doctor-image">
-    </div> 
+    </div>
     <!--
       <div class="doctor-rate" text-center dir="rtl">
       <span class="rate-label">تقييم الزوار</span>
@@ -40,11 +40,12 @@
       <span class="visitors">زائر 800</span>
     </div>
     -->
-    
+
     <div class="date-row" text-center padding>
       <div class="date-box" padding>
         <h4>اليوم</h4>
-        <p>من 12:00م الى 8:00م</p>
+        <p>من {{dateDate[0].from_date | date : 'shortTime'}}
+          الى {{dateDate[0].to_date | date : 'shortTime'}}</p>
       </div>
     </div>
 

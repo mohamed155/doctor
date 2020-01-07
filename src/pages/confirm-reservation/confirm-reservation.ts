@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {NavController, NavParams} from "ionic-angular";
 import {FilterPage} from "../filter/filter";
 import {AccountPage} from "../account/account";
 import {TicketPage} from "../ticket/ticket";
@@ -11,8 +11,12 @@ import {RegisterDoctorPage} from "../register-doctor/register-doctor";
 })
 export class ConfirmReservationPage {
 
-  constructor(public navCtrl: NavController) {
+  alldata;
+  dateDate;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.alldata = this.navParams.get('dataObj');
+    this.dateDate = this.navParams.get('dateDate');
   }
 
   onGoToFilter() {

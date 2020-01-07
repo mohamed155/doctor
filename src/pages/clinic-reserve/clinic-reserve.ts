@@ -105,7 +105,7 @@ export class ClinicReservePage {
         console.log(data);
         loader.dismiss();
         if (data) {
-          this.navCtrl.push(ConfirmReservationPage);
+          this.navCtrl.push(ConfirmReservationPage, {alldata: this.alldata, dateDate: this.dateDate});
         }
       });
   }
