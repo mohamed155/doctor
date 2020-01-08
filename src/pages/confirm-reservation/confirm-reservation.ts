@@ -15,7 +15,7 @@ export class ConfirmReservationPage {
   dateDate;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.alldata = this.navParams.get('dataObj');
+    this.alldata = this.navParams.get('alldata');
     this.dateDate = this.navParams.get('dateDate');
   }
 
